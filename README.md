@@ -1,2 +1,2 @@
 # Portafolio-Personal
-Este es un portafolio creado por mi mismo y con la posibilidad de que haya contribuidores. El motivo de este repositorio es para organizar mis proyecto realizados y contribuir a la comunidad.
+Este es mi portafolio en donde subiré archivos, programas que he realizado a lo largo del tiempo, cómo muestra de mis trabajos. Además, es público para que todas las personas lo puedan ver, compartir, ayudar y hasta poder aprender de mi y de mis logros.
