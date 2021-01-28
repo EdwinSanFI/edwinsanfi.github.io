@@ -1,0 +1,93 @@
+body {
+    margin: 0%;
+    box-sizing: border-box;
+    background-color: aliceblue;
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+}
+html {
+    font-size: 62.5%;
+}
+.header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.barra_de_navegacion {
+    background-color: #21C08B;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__quien_soy a ,
+.header__proyectos a, 
+.header__contacto a,
+.header__inicio a{
+    text-decoration: none;
+    font-size: 2rem;
+    display: flex;
+}
+
+.header__proyectos {
+    margin: none;
+    padding: 1%;
+    font-size: 2rem;
+}
+.header__proyectos ul {
+    display: none;
+    list-style: none;
+    padding: 0px;
+    position: absolute;
+    width: 100px;
+    text-align: left;
+    margin: 0px 0px 0px -14px;   
+}
+.header__proyectos:hover ul, ul:hover{
+    display: block;
+}
+.header__proyectos li {
+    margin: none;
+}
+.header__proyectos li a {
+    color: white;
+    text-decoration: none;
+}
+.header__proyectos li a:hover {
+    text-decoration: underline;
+    font-size: 1.8rem;
+}
+main table tbody tr ::-webkit-scrollbar {
+    overflow: scroll;
+}
+
+/*Descarga*/
+div section {
+    font-size: 2em;
+}
+div {
+    background: linear-gradient(#21C08B, #AB88FF);
+    margin: 0px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 30px;
+    min-height: calc(100vh - 200px);
+}
+
+.pulso {
+    animation-name: pulse;
+    font-size: 4em;
+    animation: pulse 1s infinite 200ms alternate;
+}
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
