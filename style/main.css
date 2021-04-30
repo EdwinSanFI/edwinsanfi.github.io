@@ -1,3 +1,6 @@
+/* RESPONSIVE DESIGN */
+
+/* ESTANDARIZAR */
 body {
     margin: 0%;
     box-sizing: border-box;
@@ -7,82 +10,330 @@ body {
 html {
     font-size: 62.5%;
 }
-.header {
-    margin: none;
-    padding: 0%;
-    width: 100%;
-    height: 80px;
-    
+a {
+    text-decoration: none;
 }
-.barra_de_navegacion {
-    background-color: #299B07;
+
+/* CABECERA */
+
+.nav-header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-}
-.header__quien_soy a {
-    text-decoration: none;
-    font-size: 2rem;
-    display: flex;
-}
-.header__proyectos a {
-    text-decoration: none;
-    display: flex;
-    font-size: 2rem;
-}
-.header__contacto a {
-    text-decoration: none;
-    display: flex;
-    font-size: 2rem;
-}
-.header__inicio a {
-    text-decoration: none;
-    display: flex;
-    font-size: 2rem;
-}
-.header__navegacion {
-    display: flex;
-
+    border-bottom: 2px white;
 }
 
-.header__proyectos {
-    margin: none;
-    padding: 1%;
-    font-size: 2rem;
+img {
+    width: 35px;
+    margin: 15px;
 }
-.header__proyectos ul {
+.nav-header .nav-header-logo img {
+    width: 80px;
+    margin:  0;
+    padding: 0;
+}
+.nav-header .nav-menu ul {
     display: none;
     list-style: none;
-    padding: 0px;
     position: absolute;
-    width: 100px;
-    text-align: left;
-    margin: 0px 0px 0px -14px;   
+    text-align: right;
+    padding: 0;
+    margin: 2px 0px 0px -120px;
+    font-size: 20px;
+    width: 200px;
 }
-.header__proyectos:hover ul, ul:hover{
+.nav-header .nav-menu:hover ul, ul:hover{
     display: block;
 }
-.header__proyectos li {
-    margin: none;
+.nav-header .nav-menu li {
+    margin: 10px 40px;
 }
-.header__proyectos li a {
-    color: white;
+.nav-header .nav-menu li a {
     text-decoration: none;
+    color: #39d9b2;
 }
-.header__proyectos li a:hover {
+.nav-header .nav-menu li a:hover{
     text-decoration: underline;
-    font-size: 1.8rem;
 }
-/*Main*/
 
-main  {
-    font-size: 3em;
-    position: relative;
-    background: #f8f8f8;
-    overflow: hidden;
-    -webkit-transition: -webkit-transform 500ms cubic-bezier(1, 0, 0, 1) 0ms;
-    -moz-transition: -moz-transform 500ms cubic-bezier(1, 0, 0, 1) 0ms;
-    transition: transform 500ms cubic-bezier(1, 0, 0, 1) 0ms;
-    pointer-events: all;
-    min-height: 100vh;
+/* Main */
+
+main .main-introduction {
+    font-size: 2em;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-items: center;
+    column-gap: 10px;
+    border: 10px solid white;
+    border-bottom: 5px solid white;
+}
+main .main-introduction .main-info {
+    display: grid;
+    grid-template-rows: 1fr 1fr .5fr .5fr;
+    justify-items: center;
+    align-items: center;
+    background-color: #28997D;
+}
+.main-introduction .main-info-img img{
+    height: auto;
+    width: 810px;
+    margin: 0%;
+}
+main .main-introduction .main-info h1 {
+    font-size: 4.5rem;
+}
+main .main-introduction .main-info article {
+    font-size: 2.5rem;
+}
+main .main-introduction .main-info a {
+    background-color: wheat;
+    border: 5px solid red;
+    border-radius: 6px;
+}
+main .main-introduction .main-info .tags{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+/* Menú */
+main .menu {
+    display: grid;
+    grid-template: repeat(3, 1fr) / 1fr 2fr 2fr;
+    column-gap: 10px;
+    row-gap: 10px;
+    font-size: 2.6rem;
+    height: auto;
+    border: 10px solid white;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+}
+main .menu .menu-img {
+    grid-row: 1 / 4;
+    justify-self: center;
+    padding: 0;
+}
+
+main .menu .menu-img img {
+    width: 500px;
+    height: 250px;
+    margin: 0;
+}
+
+main .menu .menu-programs, .menu-books, .menu-certificates {
+    background-color: aqua;
+    align-items: center;
+    grid-column: 2 / 3;
+    justify-items: start;
+    border-right: .7rem solid grey; 
+    border-bottom: .7rem solid grey;
+}
+
+main .menu .menu-schools, .menu-adobe, .menu-contact {
+    background-color: aqua;
+    grid-column: 3 / 4; 
+    border-right: .7rem solid grey;
+    border-bottom: .7rem solid grey;
+}
+
+main .menu img {
+    margin: 1rem 1.3rem 0 1rem;
+}
+main .menu img , article {
+    display: inline-block; 
+}
+main .menu section {
+    padding-bottom: 1.4rem;
+}
+main .menu a:visited {
+    color: orange;
+}
+
+main .menu a:hover {
+    font-size: 2.7rem;
+}
+
+
+/* Programas */
+main .main-programs {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    font-size: 1.9rem;
+    justify-items: center;
+    align-items: center;
+    height: auto;
+    background-color:orange;
+    border: 10px solid white;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+}
+main .main-programs .github {
+    display: grid;
+    grid-row: auto;
+    align-items: center;
+    justify-items: center;
+}
+main .main-programs .github  img{
+    width: 200px;
+}
+main .main-programs .last-program {
+    display: grid;
+    grid-template-rows: auto;
+}
+main .main-programs .last-program section {
+    width: 300px;
+    height: 250px;
+    background-color: wheat;
+    border: 10px solid red;
+}
+/* Escuelas */
+main .main-schools {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    font-size: 1.9rem;
+    justify-items: center;
+    align-items: center;
+    height: auto;
+    background-color: aquamarine;
+    border: 10px solid white;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+}
+main .main-schools .unam {
+    display: grid;
+    grid-template-rows: auto;
+}
+main .main-schools .unam img{
+    width: 100px;
+}
+main .main-schools .platzi{
+    display: grid;
+    grid-template-rows: auto;
+}
+main .main-schools .platzi img{
+    width: 100px;   
+}
+/* Fotos */
+main .main-books-photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 1.9rem;
+    justify-items: center;
+    align-items: center;
+    height: auto;
+    column-gap: 10px;
+    border: 10px solid white;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+}
+main .main-books-photos img{
+    width: 250px;
+}
+main .main-books-photos .likes img {
+    width: 50px;
+}
+main .main-books-photos .likes ul {
+    list-style-type: circle;
+    margin: 0;
+}
+main .main-books-photos .likes li {
+    padding: 15px 0 15px 0;
+}
+main .main-books-photos .books a{
+    display: grid;
+    grid-row: auto;
+    align-items: center;
+    justify-items: center;
+}
+main .main-books-photos .photos a{
+    display: grid;
+    grid-row: auto;
+    align-items: center;
+    justify-items: center;
+}
+
+/* ADOBE */
+main .main-adobe {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 1.9rem;
+    justify-items: center;
+    align-items: center;
+    height: auto;
+    background-color: azure;
+    border: 10px solid white;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+}
+main .main-adobe img {
+    width: 100px;
+    margin: 0%;
+}
+main .main-adobe .photoshop a{
+    display: grid;
+    grid-row: auto;
+    justify-items: center;
+}
+main .main-adobe .XD a{
+    display: grid;
+    grid-row: auto;
+    justify-items: center;
+}
+main .main-adobe .illustrator a{
+    display: grid;
+    grid-row: auto;
+    justify-items: center;
+}
+/* CERTIFICATES */
+main .main-certificates {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    font-size: 1.9rem;
+    justify-items: center;
+    align-items: center;
+    height: auto;
+    background-color: orangered;
+    border: 10px solid white;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+}
+main .main-certificates img{
+    width: 30rem;
+    margin: 0;
+}
+
+main .main-certificates .certificate-platzi {
+    display: grid;
+    grid-template-rows: auto;
+    justify-items: center;
+}
+main .main-certificates .certificate-platzi a{
+    display: grid;
+    grid-template-rows: auto;
+    justify-items: center;
+}
+
+main .main-certificates .certificate-coursera {
+    display: grid;
+    grid-template-rows: auto;
+}
+
+main .main-certificates .certificate-others {
+    display: grid;
+    grid-template-rows: auto;
+    justify-items: center;
+}
+main .main-certificates .certificate-others a{
+    display: grid;
+    grid-template-rows: auto;
+    justify-items: center;
+}
+/* FOOTER */
+footer .contacto {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 1.8em;
+    justify-items: center;
+    align-items: center;
+    border: 10px solid white;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
 }
