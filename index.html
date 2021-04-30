@@ -11,29 +11,261 @@
     <script src='.script/main.js'></script>
 </head>
 <body>
-<header class="header">
-    <nav class="barra_de_navegacion">
-        <section class="header__inicio"><a href="./index.html">Inicio</a></section>
-        <section class="header__quien_soy"><a href="./sobremi.html">Sobre mi</a></section>
-        <section class="header__proyectos"><a href="./proyectos.html">Proyectos</a>
+
+<header>
+    <nav class="nav-header">
+        <div class="nav-img-social">
+            <a href="https://www.instagram.com/edwin_san_xs/"><img src="/imagenes/Íconos/instagram.png" alt="Logo de instagram"></a>
+            <a href="https://www.linkedin.com/in/edwin-san-5296191b8/"><img src="/imagenes/Íconos/linkedin.png" alt="Logo de LinkedIn"></a>
+            <a href="https://twitter.com/EdwinSanFI"><img src="/imagenes/Íconos/twitter.png" alt="Logo de Twitter"></a>
+        </div>
+        <div class="nav-header-logo">
+            <img src="/imagenes/Web 1920 – 1.png" alt="Logo">
+        </div>
+        <div class="nav-menu">
+            <div>
+                <img src="/imagenes/Íconos/menu.png" alt="Botón de despliege de Menú">
+            </div>
             <ul>
-                <li><a href="./unam.html">Universidad Nacional Autónoma de México</a></li>
-                <li><a href="./platzi.html">Platzi</a></li>
-                <li><a href="./aspic.html">ASPIC. Instituto Gastronomico </a></li>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="sobremi.html">Sobre mi</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
-        </section>
-        <section class="header__contacto"><a href="./contacto.html">Contacto</a></section>
+        </div>
     </nav>
 </header>
+    
 
     <main>
-        <article>
-            <h1> Bienvenido a mi Blog :)</h1>
-        </article>
+        <section class="main-introduction">
+            <section class="main-info">
+                <h1>¡Hola! Soy Edwin Santiago</h1>
+                <article>Soy un estudiante de Ingeniería en Computación en la UNAM y de PLATZI. Estoy trabajando en mi para ser una mejor versión. </article>
+                <!-- <article> Nunca hay que parar de aprender.</article> -->
+                <a href="/sobremi.html">Sobre mí...</a>
+                <section class="tags">
+                    <article>Estudiante</article>
+                    <article>Gamer</article>
+                    <article>Nerd</article>
+                    <article>Música</article>
+                    <article>Café</article>
+                    <article>Salsa & Bachata</article>
+                </section>
+            </section>
+            <section class="main-info-img">
+                <img src="/imagenes/Mis fotos/chichen1.png" alt="Fotografía de Edwin">
+            </section>
+        </section>
+
+        <section class="menu">
+            <section class="menu-img">
+                <img src="/imagenes/Fotos/Programador.jpg" alt="Imagen de programación">
+            </section>
+            <section class="menu-programs">
+                <a href="#main-programs">
+                    <img src="\imagenes\Íconos\programas.png" alt="Botón del ícono de programas">
+                    <article>
+                        Programas
+                    </article>
+                </a>
+            </section>
+            <section class="menu-schools">
+                <a href="#main-schools">
+                    <img src="\imagenes\Íconos\escuelas.png" alt="Botón del ícono de escuelas"> 
+                    <article>
+                        Escuelas
+                    </article>
+                </a>
+            </section>
+            <section class="menu-books">
+                <a href="#main-books-photos">
+                    <img src="\imagenes\Íconos\libros.png" alt="Botón del ícono de libros">
+                    <article>
+                        Libros
+                    </article>
+                </a>
+            </section>
+            <section class="menu-adobe">
+                <a href="#main-adobe">
+                    <img src="\imagenes\Íconos\fotos.png" alt="Botón del ícono de fotografía ">
+                    <article>
+                        Adobe
+                    </article>
+                </a>
+            </section>
+            <section class="menu-certificates">
+                <a href="#main-certificates">
+                    <img src="\imagenes\Íconos\Certificados.png" alt="Botón del ícono de certificado">
+                    <article>
+                        Certificados
+                    </article>
+                </a>
+            </section>
+            <section class="menu-contact">
+                <a href="#contacto">
+                    <img src="\imagenes\Íconos\contacto.png" alt="Botón del ícono de contacto">
+                        <article>
+                            Contacto
+                        </article> 
+                </a>
+            </section>
+        </section>
+        
+<!-- Id para al darle click moverse en el mismo programa -->
+        <section class="main-programs" id="main-programs">
+            <section class="last-program">
+                Ultimo programa 2 - 3
+                <section>
+                    "Texto ejemplo"
+                </section>
+            </section>
+            <section class="description">
+                Descripción
+            </section>
+            <section class="github">
+                <a href="https://github.com/EdwinSanFI?tab=repositories">
+                    <img src="/imagenes/Logos/GitHub.png" alt=""> 
+                </a>
+                <article>
+                    Para ver mi repositorio
+                </article>
+            </section>
+        </section>
+        
+        <section class="main-schools" id="main-schools">
+            <section>
+                <article>
+                    PROYECTOS
+                </article>
+            </section>
+            <section class="platzi">
+                <img src="\imagenes\logos\platzi.jpg" alt="Logo Platzi">
+                <article>
+                    PLATZI
+                </article>
+            </section>
+            <section class="unam">
+                <img src="\imagenes\logos\logo_unam_oro.png" alt="Logo del escudo de la UNAM en color oro">
+                <article>
+                    UNAM
+                </article>
+            </section>
+        </section>
+
+        <section class="main-books-photos" id="main-books-photos">
+            <section class="books">
+                <a href="books.html">
+                    <img src="/imagenes/HabitosAtomicos.jpg" alt=""> 
+                    <article>
+                        Libros que te recomiendo
+                    </article>
+                </a>
+            </section>
+            <section class="likes">
+                <article>
+                    <ul>
+                        <li>Viajar</li>
+                        <li>Escuchar Música</li>
+                        <li>Aprender</li>
+                        <li>Estudiar</li>
+                        <li>Café</li>
+                    </ul>
+                </article>
+            </section>
+            <section class="photos">
+                <a href="photos.html">
+                    <img src="/imagenes/Fotos/HongKong.jpg" alt=""> 
+                    <article>
+                        Fotos tomadas por mi
+                    </article>
+                </a>
+            </section>
+        </section>
+
+        <section class="main-adobe" id="main-adobe">
+            <section class="photoshop">
+                <a href="photoshop.html">
+                    <img src="\imagenes\logos\Photoshop.png" alt="Logo de Adobe Photoshop">
+                    <article>
+                        Photoshop
+                    </article>
+                </a>
+            </section>
+            <section class="XD">
+                <a href="XD.html">
+                    <img src="\imagenes\logos\XD.png" alt="Logo de Adobe Xd">
+                    <article>XD</article>
+                </a>
+            </section>
+            <section class="illustrator">
+                <a href="illustrator.html">
+                    <img src="\imagenes\logos\Illustrator.png" alt="Logo de Adobe Illustrator">
+                    <article>
+                        Ilustrator
+                    </article>
+                </a>
+            </section>
+        </section>
+        
+        <section id="main-certificates" class="main-certificates">
+            <section class="certificate-platzi">
+                <article>
+                    Certificado Platzi
+                </article>                
+                <a href="platzi-certificates.html">
+                    <img src="\imagenes\css-grid.png" alt="Imagen de certificado de Platzi"> 
+                    <article>
+                        Ver más...
+                    </article>
+                </a>
+            </section>
+            <section class="certificate-coursera">  
+                <article>
+                    Certificados
+                </article>  
+                
+            </section>
+            <section class="certificate-others">
+                <article>
+                    Certificado Otros
+                </article>  
+                <a href="others-certificates.html">
+                    <img src="\imagenes\css-grid.png" alt="Imagen de otro certificado">
+                    <article>
+                        Ver más...
+                    </article> 
+                </a>
+            </section>
+        </section>
+        
+        <!-- <section">
+            Ultimos programas que he hecho, conectado con github, con su division de escuelas y lenguajes, los ultimos 4-5 programas. 
+        </section> -->
     </main>
     
     <footer>
-
+        <section id="contacto" class="contacto">
+            <section>
+                <article>
+                    Puedes ponerte en contacto conmigo a través de estas redes sociales :D
+                </article>
+            </section>
+            <section>
+                <a href="https://www.instagram.com/edwin_san_xs/">
+                    <img src="/imagenes/Íconos/instagram.png" alt="Logo de instagram">
+                </a>
+                <a href="https://www.linkedin.com/in/edwin-san-5296191b8/">
+                    <img src="/imagenes/Íconos/linkedin.png" alt="Logo de LinkedIn">
+                </a>
+                <a href="https://twitter.com/EdwinSanFI">
+                    <img src="/imagenes/Íconos/twitter.png" alt="Logo de Twitter">
+                </a>
+            </section>
+            <section>
+                PAYPAL
+            </section>
+        </section>
     </footer>
 </body>
-</html>>
+</html>
