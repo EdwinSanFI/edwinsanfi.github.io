@@ -234,17 +234,30 @@ main .main--programs {
     grid-template-rows: repeat(3, auto);
     justify-items: center;
 }
+.last-program--info div {
+    width: 85%;
+}
 .last-program--info div p {
     display: inline-block;
+    width: 100%;
 }
 .last-program--info div img{
-    width: 55%;
+    width: 45%;
     float: right;
     padding: 5px;
+}
+.last-program--info div span {
+    font-weight: 700;
 }
 .last-program .last-program--info div p{
     padding-left: 15px;
     font-size: calc(1em + 1vw);
+}
+/* REVISAAAAAAAAAAR */
+.last-program-info--area {
+    display: flex;
+    align-self: center;
+    text-align: center;
 }
 /*Lenguajes*/
 .lenguages {
