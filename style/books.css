@@ -1,0 +1,123 @@
+/* RESPONSIVE DESIGN */
+
+/* ESTANDARIZAR */
+body {
+    margin: 0%;
+    box-sizing: border-box;
+    background-color: aliceblue;
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+}
+html {
+    font-size: 62.5%;
+}
+a {
+    text-decoration: none;
+}
+
+/* CABECERA */
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px white;
+}
+
+img {
+    width: 35px;
+    margin: 15px;
+}
+.nav-header .nav-header-logo img {
+    width: 80px;
+    margin:  0;
+    padding: 0;
+}
+.nav-header .nav-menu ul {
+    display: none;
+    list-style: none;
+    position: absolute;
+    text-align: right;
+    padding: 0;
+    margin: 2px 0px 0px -120px;
+    font-size: 20px;
+    width: 200px;
+}
+.nav-header .nav-menu:hover ul, ul:hover{
+    display: block;
+}
+.nav-header .nav-menu li {
+    margin: 10px 40px;
+}
+.nav-header .nav-menu li a {
+    text-decoration: none;
+    color: #39d9b2;
+}
+.nav-header .nav-menu li a:hover{
+    text-decoration: underline;
+}
+
+/*BOOKS*/
+main{
+    width: 100%;
+    overflow: scroll;
+    padding: 100px;
+    position: relative;
+}
+main .books  {
+    white-space: nowrap;
+    margin: 70px 0px;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-rows: repeat(9, 1fr);
+}
+/* Libros de C++ */
+main .books .c-books {
+    white-space: nowrap;
+    margin: 70px 0px;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+
+}
+.books .c-books .book-items {
+    background-color: palevioletred;
+    width: 200px;
+    height: 250px;
+    border-radius: 30px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-right: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 450ms all;
+    transform-origin: center left;
+    position: relative;
+}
+.book-items:hover ~ .book-items {
+    transform: translate3d(100px, 0, 0);
+}
+.c-books:hover .book-items {
+     opacity: 0.3;    
+}
+.c-books:hover .book-items:hover {
+    transform: scale(1.5);
+    opacity: 1;
+}
+main .books .c-books img{
+    width: 150px;
+}
+/* Libros de Python */
+
+/* Libros de Algoritmos */
+
+/* Libros de Creación de Páginas Web */
+
+/* Libros de Machine Learning */
+
+/* Libros de Ciencia */
+
+/* Libros de Motivación */
+
+/* Libros de Finanzas */
+
+/* Libros de Crecimiento Personal */
+
+/* Libros de Mindfulness */

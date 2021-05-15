@@ -1,11 +1,20 @@
-/* RESPONSIVE DESIGN */
+/* VARIABLES */
+:root {
+    --principal: #008C9E;
+    --blue-grey: #343838;
+    --red: #9e1d08;
+    --blue-light: #b6d7f2;
+    --blue-denim: #d3e0f7;
+}
 
 /* ESTANDARIZAR */
 body {
     margin: 0%;
     box-sizing: border-box;
     background-color: aliceblue;
-    font-family: 'Roboto', 'Open Sans', sans-serif;
+    font-family: 'Bree Serif', 'Open Sans', sans-serif;
+    /* background-color: var(--blue-grey); */
+    scroll-behavior: smooth;
 }
 html {
     font-size: 62.5%;
@@ -16,324 +25,691 @@ a {
 
 /* CABECERA */
 
-.nav-header {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 2px white;
+.nav--header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
 }
-
-img {
+.nav--menu img {
     width: 35px;
     margin: 15px;
 }
-.nav-header .nav-header-logo img {
-    width: 80px;
-    margin:  0;
-    padding: 0;
+.nav--logo {
+    display: flex;
+    background-color: var(--principal);
+    grid-column: 1 / 2;
+    font-size: calc(2em + 1vw);
+    color: #F0F5F9;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid black
 }
-.nav-header .nav-menu ul {
+.nav--menu {
+    display: flex;
+    justify-content: flex-end;
+    grid-column: 2 / 4;
+    background-color: var(--blue-grey);
+    border: 5px solid black;
+}
+.nav--menu-image {
+    margin-right: 1rem;
+}
+.nav--menu ul {
     display: none;
     list-style: none;
     position: absolute;
     text-align: right;
     padding: 0;
-    margin: 2px 0px 0px -120px;
-    font-size: 20px;
-    width: 200px;
+    margin: 2px 0px 0px -80px;
+    font-size: 2rem;
 }
-.nav-header .nav-menu:hover ul, ul:hover{
+.nav--menu-image:hover ul, ul:hover{
     display: block;
 }
-.nav-header .nav-menu li {
+.nav--menu li {
     margin: 10px 40px;
 }
-.nav-header .nav-menu li a {
+.nav--menu li a {
     text-decoration: none;
-    color: #39d9b2;
+    color: var(--principal);
 }
-.nav-header .nav-menu li a:hover{
+.nav--menu li a:hover{
     text-decoration: underline;
 }
 
-/* Main */
-
-main .main-introduction {
-    font-size: 2em;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    justify-items: center;
-    column-gap: 10px;
-    border: 10px solid white;
-    border-bottom: 5px solid white;
+    /* Main */
+.main--introduction {
+    display: flex;
+    flex-wrap: wrap;
 }
-main .main-introduction .main-info {
+
+/* Imagen */
+.main--info-img {
+    border: 5px solid black;
+    height: 230px;
+    width: 100%;
+}
+.main--info-img img{
+    width: 100%;
+    height: auto;
+}
+/* Información sobre mi */
+.main--personal-info {
+    width: calc(100% - 10px);
+    border: 5px solid black;
     display: grid;
-    grid-template-rows: 1fr 1fr .5fr .5fr;
+    grid-template-rows: auto auto auto 1fr;
+    align-items: center;
+    background-color: var(--blue-light);
+}
+.main--personal-info h1 {
+    font-size: calc(2em + 1vw);
+    margin: 10px 0 0 20px;
+}
+.main--personal-info p {
+    margin: 0%;
+    font-size: calc(1em + .7vw);
+    padding: 25px 20px;
+}
+.main--personal-info .tags {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+.main--personal-info .tags p {
+    padding: 10px 40px;
+}
+/* Curriculum Vitae */
+.main--cv {
+    width: calc(100% -10px);
+    height: auto;
+    border: 5px solid black;
+    background-color: var(--blue-denim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main--cv div {
+    display: grid;
+    grid-template-rows: auto;
     justify-items: center;
     align-items: center;
-    background-color: #28997D;
 }
-.main-introduction .main-info-img img{
-    height: auto;
-    width: 810px;
-    margin: 0%;
+.main--cv img{
+    margin-top: 10px;
+    width: 90%;
 }
-main .main-introduction .main-info h1 {
-    font-size: 4.5rem;
+.main--cv p{
+    font-size: calc(1em + .7vw);
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: auto;
+    justify-content: center;
+    padding: 2px 2rem;
 }
-main .main-introduction .main-info article {
-    font-size: 2.5rem;
+.main--cv a {
+    color: #343838;
 }
-main .main-introduction .main-info a {
-    background-color: wheat;
-    border: 5px solid red;
-    border-radius: 6px;
+.main--cv p:hover {
+    font-size: calc(1em + .8vw);
+    border: 2px solid black
 }
-main .main-introduction .main-info .tags{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-}
-/* Menú */
+
+    /* Menú */
 main .menu {
     display: grid;
-    grid-template: repeat(3, 1fr) / 1fr 2fr 2fr;
-    column-gap: 10px;
-    row-gap: 10px;
-    font-size: 2.6rem;
-    height: auto;
-    border: 10px solid white;
-    border-top: 5px solid white;
-    border-bottom: 5px solid white;
+    grid-template-rows: repeat(2, auto);
+    background-color: black;
 }
-main .menu .menu-img {
-    grid-row: 1 / 4;
-    justify-self: center;
-    padding: 0;
-}
+/* IMAGEN INTRODUCTORIA */
 
-main .menu .menu-img img {
-    width: 500px;
+.menu--img{
+    width: calc(100% - 10px);
     height: 250px;
+    border: 5px solid black;
+}
+.menu--img .background{
+    width: 100%;
+    height: 100%;
+    background-image: url('/imagenes/Fotos/Programador.jpg');
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/* BOTONES */
+.menu--buttons {
+    background-color: var(--blue-grey);
+    font-size: calc(1em + .5vw);
+    display: grid;
+    width: calc(100% - 4px);
+    grid-template-columns: repeat(2, 1fr);
+}
+.menu--buttons img{
+    width: 8%;
+}
+.menu--buttons div {
+    background-color: var(--red);
+    border: 2px solid black;
+    width: 100%;
     margin: 0;
 }
-
-main .menu .menu-programs, .menu-books, .menu-certificates {
-    background-color: aqua;
-    align-items: center;
-    grid-column: 2 / 3;
-    justify-items: start;
-    border-right: .7rem solid grey; 
-    border-bottom: .7rem solid grey;
+.menu--buttons a{
+    display: grid;
+    justify-items: center;
+    color: var(--blue-denim);
+    font-size: calc(1em + .5vw);
 }
-
-main .menu .menu-schools, .menu-adobe, .menu-contact {
-    background-color: aqua;
-    grid-column: 3 / 4; 
-    border-right: .7rem solid grey;
-    border-bottom: .7rem solid grey;
-}
-
-main .menu img {
-    margin: 1rem 1.3rem 0 1rem;
-}
-main .menu img , article {
-    display: inline-block; 
-}
-main .menu section {
-    padding-bottom: 1.4rem;
-}
-main .menu a:visited {
+.menu a:visited {
     color: orange;
 }
-
-main .menu a:hover {
-    font-size: 2.7rem;
+.menu a:hover {
+    font-size: calc(1em + .6vw);
 }
 
-
-/* Programas */
-main .main-programs {
+    /*Programas*/ 
+main .main--programs {
     display: grid;
-    grid-template-columns: 2fr 2fr 1fr;
-    font-size: 1.9rem;
-    justify-items: center;
-    align-items: center;
-    height: auto;
-    background-color:orange;
-    border: 10px solid white;
-    border-top: 5px solid white;
-    border-bottom: 5px solid white;
+    grid-template-rows: repeat(3, auto);
+    font-size: 1rem;
 }
-main .main-programs .github {
+/*Ultimo Programa*/
+.last-program {
+    background-color: var(--blue-light);
+    border: 5px solid black;
+    width: auto;
+    max-width: 800px;
+}
+.last-program h2 {
+    margin: 0 0 5px 0;
+    display: flex;
+    justify-content: center;
+    font-size: calc(1.5em + 1vw);
+}
+.last-program .last-program--info {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+}
+.last-program .last-program--info div {
+    display: grid;
+    grid-template-rows: auto;
+    justify-items: center;
+}
+.last-program .last-program--info div p{
+    padding-left: 15px;
+    font-size: calc(1em + 1vw);
+}
+/*Lenguajes*/
+.lenguages {
+    background-color: var(--principal);
+    border: 5px solid black;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "c titulo titulo Java"
+                         "Swift JavaScript TensorFlow Python"
+                         "php HTML Numpy MySQL"
+                         ". Css Matplotlib .";
+    width: auto;
+    max-width: 600px;
+}
+main .main--programs .lenguages h2{
+    font-size: calc(1.5em + 1vw);
+    color: var(--blue-denim);
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    grid-area: titulo;
+}
+main .main--programs .lenguages .c{
+    grid-area: c;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+main .main--programs .lenguages .Java{
+    grid-area: Java;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+main .main--programs .lenguages  .JavaScript{
+    grid-area: JavaScript;
+    align-self: center;
+    display: flex;
+    justify-self: center;
+}
+main .main--programs .lenguages  .TensorFlow{
+    grid-area: TensorFlow;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+main .main--programs .lenguages  .Swift{
+    grid-area: Swift;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+main .main--programs .lenguages  .Python{
+    grid-area: Python;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+main .main--programs .lenguages  .HTML{
+    grid-area: HTML;
+    align-self: center;
+    display: flex;
+    justify-self: center;
+    /* padding: 0 0 50px 0; */
+}
+main .main--programs .lenguages  .Numpy{
+    grid-area: Numpy;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+main .main--programs .lenguages  .php{
+    grid-area: php;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+main .main--programs .lenguages  .MySQL{
+    grid-area: MySQL;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+main .main--programs .lenguages .Css{
+    grid-area: Css;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+main .main--programs .lenguages .Matplotlib{
+    grid-area: Matplotlib;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+main .main--programs .lenguages img{
+    width: 60%;
+}
+/*GITHUB*/
+main .main--programs .github {
+    background-color: var(--blue-denim);
+    border: 5px solid black;
     display: grid;
     grid-row: auto;
     align-items: center;
     justify-items: center;
+    width: auto;
 }
-main .main-programs .github  img{
-    width: 200px;
+main .main--programs .github  p{
+    font-size: calc(1em + 1vw);
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 0 10px;
 }
-main .main-programs .last-program {
+
+    /* Escuelas */ 
+main .main--schools {
     display: grid;
-    grid-template-rows: auto;
-}
-main .main-programs .last-program section {
-    width: 300px;
-    height: 250px;
-    background-color: wheat;
-    border: 10px solid red;
-}
-/* Escuelas */
-main .main-schools {
-    display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
-    font-size: 1.9rem;
+    grid-template-rows: repeat(2, auto);
     justify-items: center;
     align-items: center;
-    height: auto;
-    background-color: aquamarine;
-    border: 10px solid white;
-    border-top: 5px solid white;
-    border-bottom: 5px solid white;
 }
-main .main-schools .unam {
+/* PLATZI */
+.platzi{
     display: grid;
     grid-template-rows: auto;
+    border: 5px solid black;
+    background-color: var(--blue-grey);
+    color: var(--blue-denim);
+    height: 100%;
+    width: calc(100% - 10px);
 }
-main .main-schools .unam img{
-    width: 100px;
+.platzi h2, .unam h2{
+    display: inline;
+    justify-self: center;
+    font-size: calc(1.5em + 1vw);
+    margin: 10px 0;
 }
-main .main-schools .platzi{
+.platzi--div, .unam--div{
     display: grid;
-    grid-template-rows: auto;
+    grid-template-columns: auto auto;
+    padding-left: 15px;
+    font-size: calc(1em + .5vw);
 }
-main .main-schools .platzi img{
+.platzi--div div, .unam--div div{
+    display: grid;
+    justify-items: center;
+    font-size: calc(1em + .5vw);
+}
+/*Imagen de código*/
+.platzi--div-image img, .unam--div .unam--div-image img{
+    width: 120px;   
+    padding-right: 15px;
+}
+/**/
+.platzi--div-image .platzi--logo{
     width: 100px;   
+    padding-right: 15px;
 }
-/* Fotos */
+/* UNAM */
+main .main--schools .unam {
+    display: grid;
+    grid-template-rows: auto;
+    height: auto;
+    background-color: var(--blue-light);
+    border: 5px solid black;
+    width: calc(100% - 10px);
+}
+main .main--schools .unam--div .unam--div-image {
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-items: center;
+}
+main .main--schools .unam--div .unam--div-image .unam--logo{
+    width: 65px;
+    padding-right: 15px;
+}
+
+    /* MY LIKES */
 main .main-books-photos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    font-size: 1.9rem;
-    justify-items: center;
-    align-items: center;
-    height: auto;
-    column-gap: 10px;
-    border: 10px solid white;
-    border-top: 5px solid white;
-    border-bottom: 5px solid white;
+    grid-template-rows: repeat(3, auto);
 }
-main .main-books-photos img{
-    width: 250px;
+/*BOOKS*/
+main .main-books-photos .books{
+    background-color: var(--red);
+    border: 5px solid black;
 }
-main .main-books-photos .likes img {
-    width: 50px;
-}
-main .main-books-photos .likes ul {
-    list-style-type: circle;
-    margin: 0;
-}
-main .main-books-photos .likes li {
-    padding: 15px 0 15px 0;
-}
-main .main-books-photos .books a{
+main .main-books-photos .books h2{
+    font-size: calc(1.5em + 1vw);
+    color: var(--blue-denim);
     display: grid;
-    grid-row: auto;
+    justify-items: center;
+    margin: 10px 0;
+    width: auto;
+}
+main .main-books-photos .books div {
+    display: grid;
+    grid-template-columns: auto;
     align-items: center;
     justify-items: center;
 }
-main .main-books-photos .photos a{
+main .main-books-photos .books img{
+    width: 17%;
+}
+/*LIKES*/
+main .main-books-photos .likes {
+    background-color: var(--blue-denim);
     display: grid;
-    grid-row: auto;
-    align-items: center;
+    grid-template-rows: repeat(2, auto);
     justify-items: center;
+    border: 5px solid black;
+}
+main .main-books-photos .likes h2{
+    font-size: calc(2rem + .8vw);
+    margin: 10px 0;
+}
+main .main-books-photos .likes .likes--info{
+    font-size: calc(1em + .7vw);
+    display: grid;
+    grid-template-columns: repeat(2, auto);
 }
 
-/* ADOBE */
-main .main-adobe {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    font-size: 1.9rem;
-    justify-items: center;
-    align-items: center;
-    height: auto;
-    background-color: azure;
-    border: 10px solid white;
-    border-top: 5px solid white;
-    border-bottom: 5px solid white;
+.main-books-photos .likes ul {
+    list-style-type: circle;
+    margin: 0 0 0 15px;
 }
-main .main-adobe img {
+.main-books-photos .likes li {
+    padding: 5px;
+}
+.main-books-photos .likes .likes--info div img {
+    width: 40%;
+}
+/*PHOTOS*/
+.main-books-photos .photos {
+    background-color: var(--principal);
+    border: 5px solid black;
+}
+.main-books-photos .photos h2{
+    font-size: calc(1.5em + .8vw);
+    display: grid;
+    justify-items: center;
+    margin: 10px 0;
+    color: var(--blue-denim);
+}
+.main-books-photos .photos a{
+    display: grid;
+    grid-template-rows: auto;
+    justify-items: center;
+}
+.main-books-photos .photos img {
+    width: 30%;
+}
+
+    /* ADOBE */
+.main-adobe {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    font-size: 2rem;
+    justify-items: center;
+    width: 100%;
+}
+.main-adobe img {
     width: 100px;
     margin: 0%;
 }
-main .main-adobe .photoshop a{
+.XD {
+    width: calc(100% - 10px);
+    border: 5px solid black;
+    background-color: var(--blue-grey);
+}
+.XD a{
     display: grid;
-    grid-row: auto;
+    justify-items: center;
+    color: var(--blue-denim);
+}
+.photoshop {
+    background-color: var(--principal);
+    width: calc(100% - 10px);
+    border: 5px solid black;
+}
+.photoshop a{
+    display: grid;
+    justify-items: center;
+    color: var(--blue-denim);
+}
+.illustrator {
+    background-color: var(--blue-denim);
+    width: calc(100% - 10px);
+    border: 5px solid black;
+}
+.illustrator a{
+    display: grid;
     justify-items: center;
 }
-main .main-adobe .XD a{
+
+    /* CERTIFICATES */
+.main-certificates {
     display: grid;
-    grid-row: auto;
-    justify-items: center;
-}
-main .main-adobe .illustrator a{
-    display: grid;
-    grid-row: auto;
-    justify-items: center;
-}
-/* CERTIFICATES */
-main .main-certificates {
-    display: grid;
-    grid-template-columns: 2fr 1fr 2fr;
-    font-size: 1.9rem;
+    grid-template-rows: repeat(3, auto);
     justify-items: center;
     align-items: center;
+    width: 100%;
     height: auto;
-    background-color: orangered;
-    border: 10px solid white;
-    border-top: 5px solid white;
-    border-bottom: 5px solid white;
 }
-main .main-certificates img{
-    width: 30rem;
+.main-certificates img{
+    width: 100%;
     margin: 0;
 }
-
-main .main-certificates .certificate-platzi {
+/*PLATZI*/
+.certificate-platzi {
+    display: grid;
+    grid-template-rows: auto;
+    justify-items: center;
+    border: 5px solid black;
+    background-color: var(--blue-denim);
+    width: calc(100% - 10px);
+    height: 100%;
+}
+.certificate-platzi a{
+    display: grid;
+    grid-template-rows: auto;
+    justify-items: center;
+    width: auto;
+}
+.certificate-platzi p, .certificate-others p{
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: calc(1em + .5vw);
+    margin: 10px;
+    padding: 0 10px;
+}
+.certificate-platzi p:hover, .certificate-others p:hover {
+    font-size: calc(1em + .6vw);
+    border: 2px solid black
+}
+/*OTROS*/
+.certificate-others {
+    display: grid;
+    grid-template-rows: auto;
+    justify-items: center;
+    border: 5px solid black;
+    width: calc(100% - 10px);
+    height: 100%;
+    background-color: var(--blue-light);
+}
+.certificate-others a{
     display: grid;
     grid-template-rows: auto;
     justify-items: center;
 }
-main .main-certificates .certificate-platzi a{
+/* CONTACTO */
+.contacto {
     display: grid;
-    grid-template-rows: auto;
+    grid-template-rows: repeat(4, auto);
     justify-items: center;
+    background-color: var(--red);
+    border: 5px solid black;
+    width: calc(100% - 10px);
 }
-
-main .main-certificates .certificate-coursera {
-    display: grid;
-    grid-template-rows: auto;
+.contacto h2 {
+    font-size: calc(2rem + 1vw);
+    color: white;
+    margin: 10px 0;
 }
-
-main .main-certificates .certificate-others {
-    display: grid;
-    grid-template-rows: auto;
-    justify-items: center;
+.contact-images {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
-main .main-certificates .certificate-others a{
+/*Animación*/
+.button{ 
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    box-shadow: 0 10px 10px rgba(0 ,0 , 0, 0.16);
+    cursor: pointer;
+    float: left;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
     display: grid;
-    grid-template-rows: auto;
-    justify-items: center;
-}
-/* FOOTER */
-footer .contacto {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    font-size: 1.8em;
+    grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     align-items: center;
-    border: 10px solid white;
-    border-top: 5px solid white;
-    border-bottom: 5px solid white;
+    background-color: black;
+}
+.github .button {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+}
+.github .button span {
+    font-size: 2rem;
+    line-height: 100px;
+}
+.github .button img {
+    width: 100px;
+    border-radius: 100px;
+}
+.button:hover {
+    width: 150px;
+    background-color: var(--red);
+}
+.github .button:hover {
+    width: 310px;
+    background-color: var(--blue-denim);
+}
+.button .icon {
+    display: inline-block;
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    border-radius: 50px;
+}
+.github .button .icon {
+    width: 100px;
+    height: 100px;
+}
+.button .icon i{
+    font-size: 6rem;
+    transition: all 0.3s ease-in-out;
+    line-height: 70px;
+    color: var(--red);
+}
+.github .button .icon i{
+    color: var(--blue-denim);
+    font-size: 100px;
+    line-height: 100px;
+}
+.button .icon:hover i{
+    color: white;
+}
+
+.button span {
+    font-size: 1.5rem;
+    line-height: 70px;
+}
+.github .button:nth-child(1):hover .icon {background: #333;}
+.button:nth-child(1):hover .icon {background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);}
+.button:nth-child(2):hover .icon {background:  #0e76a8;}
+.button:nth-child(3):hover .icon {background: #1DA1F2;}
+
+.github .button:nth-child(1) span {color: #333;}
+.button:nth-child(1) span {color: white;}
+.button:nth-child(2) span {color: var(--blue-denim);}
+.button:nth-child(3) span {color: #1DA1F2;}
+
+main .main-certificates .contacto .contact-images img {
+    width: 7rem;
+} 
+main .main-certificates .contacto .contact-paypal {
+    font-size: 1.4rem;
+    color: var(--blue-denim);
+}
+/*Paypal*/
+.paypal--boton{
+    width: 150px;
+}
+
+    /* FOOTER */
+.footer{
+    border: 5px solid black;
+    font-size: calc(1em + .7vw);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: var(--principal);
+    color: var(--blue-denim);
 }

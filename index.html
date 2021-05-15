@@ -7,163 +7,226 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Mi portafolio</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'> <!-- Esto es mega importante para el diseño responsivo-->
-    <link rel='stylesheet' type='text/css' media='screen' href='./style/main.css'>
-    <script src='.script/main.js'></script>
+    <link rel='stylesheet' type='text/css' href='/style/main.css'>
+    <link rel='stylesheet' type='text/css' media='(min-width: 480px)' href='/style/main--landscape.css'>
+    <link rel='stylesheet' type='text/css' media='(min-width: 768px)' href='/style/main--tablet.css'>
+    <link rel='stylesheet' type='text/css' media='(min-width: 1000px)' href='/style/main--computer.css'>
+    <script src='/script/main.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header>
-    <nav class="nav-header">
-        <div class="nav-img-social">
-            <a href="https://www.instagram.com/edwin_san_xs/"><img src="/imagenes/Íconos/instagram.png" alt="Logo de instagram"></a>
-            <a href="https://www.linkedin.com/in/edwin-san-5296191b8/"><img src="/imagenes/Íconos/linkedin.png" alt="Logo de LinkedIn"></a>
-            <a href="https://twitter.com/EdwinSanFI"><img src="/imagenes/Íconos/twitter.png" alt="Logo de Twitter"></a>
+    <nav class="nav--header">
+        <div class="nav--logo">
+            <span>EDWIN SAN</span>
         </div>
-        <div class="nav-header-logo">
-            <img src="/imagenes/Web 1920 – 1.png" alt="Logo">
-        </div>
-        <div class="nav-menu">
-            <div>
+        
+        <div class="nav--menu">
+            <div class="nav--menu-image">
                 <img src="/imagenes/Íconos/menu.png" alt="Botón de despliege de Menú">
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="sobremi.html">Sobre mi</a></li>
+                    <li><a href="proyectos.html">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
             </div>
-            <ul>
-                <li><a href="/">Inicio</a></li>
-                <li><a href="sobremi.html">Sobre mi</a></li>
-                <li><a href="proyectos.html">Proyectos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
         </div>
     </nav>
 </header>
     
 
     <main>
-        <section class="main-introduction">
-            <section class="main-info">
-                <h1>¡Hola! Soy Edwin Santiago</h1>
-                <article>Soy un estudiante de Ingeniería en Computación en la UNAM y de PLATZI. Estoy trabajando en mi para ser una mejor versión. </article>
-                <!-- <article> Nunca hay que parar de aprender.</article> -->
-                <a href="/sobremi.html">Sobre mí...</a>
-                <section class="tags">
-                    <article>Estudiante</article>
-                    <article>Gamer</article>
-                    <article>Nerd</article>
-                    <article>Música</article>
-                    <article>Café</article>
-                    <article>Salsa & Bachata</article>
-                </section>
-            </section>
-            <section class="main-info-img">
+        <section class="main--introduction">
+            <section class="main--info-img">
                 <img src="/imagenes/Mis fotos/chichen1.png" alt="Fotografía de Edwin">
+            </section>
+            <section class="main--info">
+                <section class="main--personal-info">
+                    <h1>¡Hola! Soy Edwin Santiago</h1>
+                    <p>Estoy estudiando Ingeniería en 
+                        Computación en la Universidad 
+                        Autónoma Nacional de México 
+                        (UNAM) y en PLATZI.</p>
+                    <p>Me encanta estudiar y estoy
+                        trabajando en mi, para ser una 
+                        mejor versión</p>
+                    <section class="tags">
+                        <p>Adaptabilidad al cambio</p>
+                        <p>Autodidacta</p>
+                        <p>Intercambio de ideas</p>
+                        <p>Trabajo en equipo</p>
+                    </section>
+                </section>
+                <section class="main--cv">
+                   <div>
+                        <img src="/imagenes/Archivos2/Grupo 97@2x.png" alt="Curriculum Vitae de Edwin 2021">
+                        <div>
+                            <p><a href="/imagenes/Archivos2/Grupo 97.pdf" download="Edwin San CV.pdf">Descargar</a></p>
+                        </div>
+                   </div>
+                </section>
             </section>
         </section>
 
         <section class="menu">
-            <section class="menu-img">
-                <img src="/imagenes/Fotos/Programador.jpg" alt="Imagen de programación">
-            </section>
-            <section class="menu-programs">
-                <a href="#main-programs">
-                    <img src="\imagenes\Íconos\programas.png" alt="Botón del ícono de programas">
-                    <article>
-                        Programas
-                    </article>
-                </a>
-            </section>
-            <section class="menu-schools">
-                <a href="#main-schools">
-                    <img src="\imagenes\Íconos\escuelas.png" alt="Botón del ícono de escuelas"> 
-                    <article>
-                        Escuelas
-                    </article>
-                </a>
-            </section>
-            <section class="menu-books">
-                <a href="#main-books-photos">
-                    <img src="\imagenes\Íconos\libros.png" alt="Botón del ícono de libros">
-                    <article>
-                        Libros
-                    </article>
-                </a>
-            </section>
-            <section class="menu-adobe">
-                <a href="#main-adobe">
-                    <img src="\imagenes\Íconos\fotos.png" alt="Botón del ícono de fotografía ">
-                    <article>
-                        Adobe
-                    </article>
-                </a>
-            </section>
-            <section class="menu-certificates">
-                <a href="#main-certificates">
-                    <img src="\imagenes\Íconos\Certificados.png" alt="Botón del ícono de certificado">
-                    <article>
-                        Certificados
-                    </article>
-                </a>
-            </section>
-            <section class="menu-contact">
-                <a href="#contacto">
-                    <img src="\imagenes\Íconos\contacto.png" alt="Botón del ícono de contacto">
+            <!-- Imagen Introductoria -->
+            <div class="menu--img">
+                <div class="background"></div>
+            </div>
+            <!-- Botones -->
+            <section class="menu--buttons">
+                <div class="menu-programs">
+                    <a href="#main--programs">
+                        <img src="\imagenes\Íconos\programas.png" alt="Botón del ícono de programas">
                         <article>
-                            Contacto
-                        </article> 
-                </a>
+                            Programas
+                        </article>
+                    </a>
+                </div>
+                <div class="menu-schools">
+                    <a href="#main-schools">
+                        <img src="\imagenes\Íconos\escuelas.png" alt="Botón del ícono de escuelas"> 
+                        <article>
+                            Escuelas
+                        </article>
+                    </a>
+                </div>
+                <div class="menu-books">
+                    <a href="#main-books-photos">
+                        <img src="\imagenes\Íconos\libros.png" alt="Botón del ícono de libros">
+                        <article>
+                            Libros
+                        </article>
+                    </a>
+                </div>
+                <div class="menu-adobe">
+                    <a href="#main-adobe">
+                        <img src="\imagenes\Íconos\fotos.png" alt="Botón del ícono de fotografía ">
+                        <article>
+                            Adobe
+                        </article>
+                    </a>
+                </div>
+                <div class="menu-certificates">
+                    <a href="#main-certificates">
+                        <img src="\imagenes\Íconos\Certificados.png" alt="Botón del ícono de certificado">
+                        <article>
+                            Certificados
+                        </article>
+                    </a>
+                </div>
+                <div class="menu-contact">
+                    <a href="#contacto">
+                        <img src="\imagenes\Íconos\contacto.png" alt="Botón del ícono de contacto">
+                            <article>
+                                Contacto
+                            </article> 
+                    </a>
+                </div>
             </section>
         </section>
+
+        <section class="main--programs" id="main--programs">
+
+            <div class="last-program">
+                <h2>Último Programa</h2>
+                <section class="last-program--info">
+                    <div>
+                        <p><span>Área:</span> Machine Learning</p>
+                        <p><span>Lenguajes Utilizados:</span>Python, Numpy, TensorFlow, Matplotlib</p>
+                        <p><span>Objetivo</span>Con un set de datos dedicado a 80% para la información y 20% para entrenamiento, detectar las prendas de la ropa.</p>
+                    </div>
+                    <div>
+                        <img src="/imagenes/Fotos/clothe.png" alt="Prueba del programa al detectar la ropa">
+                        <img src="/imagenes/Fotos/acurrancy.png" alt="Exactitud del programa">
+                    </div>
+                </section>
+            </div>
+
+            <div class="lenguages">
+                <h2 class="titulo">Lenguajes que utilizo</h2>
+                <img src="/imagenes/Logos/c++.png" alt="Logo azul de C++" class="c">
+                <img src="/imagenes/Logos/java.png" alt="Logo azul con rojo de Java" class="Java">
+                <img src="/imagenes/Logos/javascript.png" alt="Logo amarillo de JavaScript" class="JavaScript">
+                <img src="/imagenes/Logos/tensorflow.png" alt="Logo naranja con blanco de TensorFlow" class="TensorFlow">
+                <img src="/imagenes/Logos/swift.png" alt="Logo anaranjado de Swift" class="Swift">
+                <img src="/imagenes/Logos/python.png" alt="Logo azul con amarillo de python" class="Python">
+                <img src="/imagenes/Logos/HTML.png" alt="Logo anaranjado de HTML" class="HTML">
+                <img src="/imagenes/Logos/numpy.png" alt="Logo azul de Numpy" class="Numpy">
+                <img src="/imagenes/Logos/php.png" alt="Logo morado de php" class="php">
+                <img src="/imagenes/Logos/mySQL.png" alt="Logo naranja con azul de MySQL" class="MySQL">
+                <img src="/imagenes/Logos/css.png" alt="Logo azul de CSS" class="Css">
+                <img src="/imagenes/Logos/matplotlib.svg" alt="Logo de Matplotlib" class="Matplotlib">
+            </div>
+
+            <div class="github">
+                <div class="button">
+                    <div class="icon">
+                        <a href="https://github.com/EdwinSanFI">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                    <span>GitHub</span>
+                    <img src="/imagenes/Mis fotos/1.jpg" alt="">
+                </div>
+                
+                <a href="https://github.com/EdwinSanFI?tab=repositories">
+                    <p>Ver más...</p>
+                </a>
+            </div>
+        </section>
         
-<!-- Id para al darle click moverse en el mismo programa -->
-        <section class="main-programs" id="main-programs">
-            <section class="last-program">
-                Ultimo programa 2 - 3
-                <section>
-                    "Texto ejemplo"
+        <section class="main--schools" id="main-schools">
+            <section class="platzi">
+                <h2>El más reciente proyecto</h2>
+                <section class="platzi--div">
+                    <div>
+                        <p>Área: Web Scraping.</p>
+                        <p>Lenguajes utilizados: Python & Xpath. </p>
+                        <p>Objetivo: Obtener el encabezado, resumen y cuerpo de las noticias más recientes de La República y guardarlas en una carpeta con la fecha actual.</p>
+                    </div>
+                    <div class="platzi--div-image">
+                        <img src="\imagenes\Logos\platzi.jpg" alt="Logo Platzi" class="platzi--logo">
+                        <img src="/imagenes/Fotos/RecienteProyectoPlatzi.png" alt="Imagen del último programa realizado en platzi" class="platzi--program">
+                    </div>
                 </section>
             </section>
-            <section class="description">
-                Descripción
-            </section>
-            <section class="github">
-                <a href="https://github.com/EdwinSanFI?tab=repositories">
-                    <img src="/imagenes/Logos/GitHub.png" alt=""> 
-                </a>
-                <article>
-                    Para ver mi repositorio
-                </article>
-            </section>
-        </section>
-        
-        <section class="main-schools" id="main-schools">
-            <section>
-                <article>
-                    PROYECTOS
-                </article>
-            </section>
-            <section class="platzi">
-                <img src="\imagenes\logos\platzi.jpg" alt="Logo Platzi">
-                <article>
-                    PLATZI
-                </article>
-            </section>
             <section class="unam">
-                <img src="\imagenes\logos\logo_unam_oro.png" alt="Logo del escudo de la UNAM en color oro">
-                <article>
-                    UNAM
-                </article>
+                <h2>El más reciente proyecto</h2>
+                <section class="unam--div">
+                    <div>
+                        <p>Área: Estructura de Datos y Algoritmos</p>
+                        <p>Lenguajes utilizados: C++</p>
+                        <p>Objetivo:  Solicitarle al  usuario que ingrese números para completar un array de [5][4] & si son múltiplos de 2 serán duplicados, sino, serán triplicados. Al final muestra el arreglo modificado</p>
+                    </div>
+                    <div class="unam--div-image">
+                        <img src="\imagenes\Logos\logo_unam_oro.png" alt="Logo del escudo de la UNAM en color oro" class="unam--logo">
+                        <img src="/imagenes/Fotos/RecienteProyectoUNAM.png" alt="Imagen del último programa realizado en la UNAM">
+                    </div>
+                </section>
             </section>
         </section>
 
         <section class="main-books-photos" id="main-books-photos">
             <section class="books">
-                <a href="books.html">
-                    <img src="/imagenes/HabitosAtomicos.jpg" alt=""> 
-                    <article>
-                        Libros que te recomiendo
-                    </article>
-                </a>
+                <h2>RECOMENDACIONES DE LIBROS</h2>
+                <div>
+                    <a href="books.html">
+                        <img src="/imagenes/Books/Crecimiento/HabitosAtomicos.jpg" alt=""> 
+                        <img src="/imagenes/Books/Crecimiento/ElClubDeLas5.jpg" alt="">
+                        <img src="/imagenes/Books/Programación/C++/estructura_de_datos_c++_005.jpg" alt="">
+                        <img src="/imagenes/Books/Programación/Html & CSS/CssGrid.jpg" alt="">
+                    </a>
+                </div>
             </section>
+
             <section class="likes">
-                <article>
+                <h2>INTERESES</h2>
+                <div class="likes--info">
                     <ul>
                         <li>Viajar</li>
                         <li>Escuchar Música</li>
@@ -171,100 +234,128 @@
                         <li>Estudiar</li>
                         <li>Café</li>
                     </ul>
-                </article>
+                    <div>
+                        <img src="/imagenes/Íconos/CV/king.png" alt="">
+                    </div>
+                </div>
             </section>
+            
             <section class="photos">
+                <h2>FOTOS TOMADAS POR MI</h2>
                 <a href="photos.html">
                     <img src="/imagenes/Fotos/HongKong.jpg" alt=""> 
-                    <article>
-                        Fotos tomadas por mi
-                    </article>
+                    
                 </a>
             </section>
         </section>
 
         <section class="main-adobe" id="main-adobe">
-            <section class="photoshop">
-                <a href="photoshop.html">
-                    <img src="\imagenes\logos\Photoshop.png" alt="Logo de Adobe Photoshop">
-                    <article>
-                        Photoshop
-                    </article>
-                </a>
-            </section>
+            
             <section class="XD">
-                <a href="XD.html">
-                    <img src="\imagenes\logos\XD.png" alt="Logo de Adobe Xd">
+                <div>
+                    <a href="XD.html">
+                    <img src="/imagenes/Logos/XD.png" alt="Logo de Adobe Xd">
                     <article>XD</article>
-                </a>
+                    </a>
+                </div>
+                <div>
+                    <img src="" alt="">
+                </div>
             </section>
-            <section class="illustrator">
-                <a href="illustrator.html">
-                    <img src="\imagenes\logos\Illustrator.png" alt="Logo de Adobe Illustrator">
-                    <article>
-                        Ilustrator
-                    </article>
-                </a>
-            </section>
-        </section>
-        
-        <section id="main-certificates" class="main-certificates">
-            <section class="certificate-platzi">
-                <article>
-                    Certificado Platzi
-                </article>                
-                <a href="platzi-certificates.html">
-                    <img src="\imagenes\css-grid.png" alt="Imagen de certificado de Platzi"> 
-                    <article>
-                        Ver más...
-                    </article>
-                </a>
-            </section>
-            <section class="certificate-coursera">  
-                <article>
-                    Certificados
-                </article>  
+
+            <section class="photoshop">
+                <div>
+                    <a href="photoshop.html">
+                        <img src="\imagenes\Logos\Photoshop.png" alt="Logo de Adobe Photoshop">
+                        <article>
+                            Photoshop
+                        </article>
+                    </a>
+                </div>
+                <div>
+                    <img src="" alt="">
+                </div>
                 
             </section>
-            <section class="certificate-others">
-                <article>
-                    Certificado Otros
-                </article>  
-                <a href="others-certificates.html">
-                    <img src="\imagenes\css-grid.png" alt="Imagen de otro certificado">
-                    <article>
-                        Ver más...
-                    </article> 
-                </a>
+            
+            <section class="illustrator">
+                <div>
+                    <a href="illustrator.html">
+                        <img src="/imagenes/Logos/Illustrator.png" alt="Logo de Adobe Illustrator">
+                        <article>
+                            Ilustrator
+                        </article>
+                    </a>
+                </div>
+                <div>
+                    <img src="" alt="">
+                </div>
+                
             </section>
         </section>
-        
-        <!-- <section">
-            Ultimos programas que he hecho, conectado con github, con su division de escuelas y lenguajes, los ultimos 4-5 programas. 
-        </section> -->
+
+        <section id="main-certificates" class="main-certificates">
+            <section class="certificate-platzi">               
+                <a href="platzi-certificates.html">
+                    <img src="\imagenes\css-grid.png" alt="Imagen de certificado de Platzi"> 
+                </a>
+                <a href="platzi-certificates.html">
+                    <p> Ver más...</p>
+                </a>
+            </section>
+
+            <section class="certificate-others">  
+                <a href="others-certificates.html">
+                    <img src="\imagenes\css-grid.png" alt="Imagen de otro certificado">
+                    <p> Ver más...</p> 
+                </a>
+            </section>
+
+            <section id="contacto" class="contacto">
+                <h2> Contacto </h2>
+                <div class="contact-images">
+                    <div class="button">
+                        <div class="icon">
+                            <a href="https://www.instagram.com/edwin_san_xs/">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                        <span>Instagram</span>
+                    </div>
+                    <div class="button">
+                        <div class="icon">
+                            <a href="https://www.linkedin.com/in/edwin-san-5296191b8/">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                        <span>LinkedIn</span>
+                    </div>
+                    <div class="button">
+                        <div class="icon">
+                            <a href="https://twitter.com/EdwinSanFI">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                        <span>Twitter</span>
+                    </div>
+                </div>
+                <div class="contact-paypal">
+                    <p>¿Me invitas un café?</p>
+                    <form action="https://www.paypal.com/donate" method="post" target="_top" class="paypal">
+                        <input type="hidden" name="hosted_button_id" value="S5DKS6EKQWXLS" />
+                        <input type="image" src="https://www.paypalobjects.com/es_XC/MX/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donar con el botón de PayPal" class="paypal--boton"/>
+                        <img alt="" border="0" src="https://www.paypal.com/es_MX/i/scr/pixel.gif" width="1" height="1" />
+                    </form>      
+                </div>
+            </section>
+        </section> 
     </main>
     
     <footer>
-        <section id="contacto" class="contacto">
-            <section>
-                <article>
-                    Puedes ponerte en contacto conmigo a través de estas redes sociales :D
-                </article>
-            </section>
-            <section>
-                <a href="https://www.instagram.com/edwin_san_xs/">
-                    <img src="/imagenes/Íconos/instagram.png" alt="Logo de instagram">
-                </a>
-                <a href="https://www.linkedin.com/in/edwin-san-5296191b8/">
-                    <img src="/imagenes/Íconos/linkedin.png" alt="Logo de LinkedIn">
-                </a>
-                <a href="https://twitter.com/EdwinSanFI">
-                    <img src="/imagenes/Íconos/twitter.png" alt="Logo de Twitter">
-                </a>
-            </section>
-            <section>
-                PAYPAL
-            </section>
+        <section class="footer">
+            <article>
+                2021. Creado por Edwin San
+            </article>
         </section>
     </footer>
 </body>
