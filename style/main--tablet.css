@@ -86,7 +86,7 @@
 }
     /*Certificates*/
 .main-certificates {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, auto);
 }
     /*Contacto*/
 .contacto {
@@ -99,32 +99,37 @@
 }
     /*Animación*/
 .button{ 
-    width: 110px;
-    height: 110px;
-    border-radius: 110px;
+    width: 70px;
+    height: 70px;
+    border-radius: 80px;
 }
 .button:hover {
-    width: 200px;
+    width: 150px;
     background-color: var(--red);
     border: 1px solid white;
 }
 .button .icon {
-    height: 110px;
-    width: 110px;
-    border-radius: 110px;
+    height: 70px;
+    width: 70px;
+    border-radius: 70px;
 }
 .button .icon i{
-    font-size: 10rem;
-    line-height: 110px;
+    font-size: 6rem;
+    line-height: 70px;
 }
 .button span {
     font-size: 2rem;
-    line-height: 110px;
+    line-height: 60px;
 }
 main .main-certificates .contacto .contact-paypal {
     font-size: 2rem;
 }
 /*Paypal*/
+.contact-paypal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .paypal--boton{
-    width: 210px;
+    width: 100px;
 }

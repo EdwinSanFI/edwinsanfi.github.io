@@ -2,3 +2,47 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
+/*Animación*/
+.button{ 
+    width: 110px;
+    height: 110px;
+    border-radius: 110px;
+}
+.button:hover {
+    width: 220px;
+    background-color: var(--red);
+    border: 1px solid white;
+}
+.button .icon {
+    height: 110px;
+    width: 110px;
+    border-radius: 110px;
+}
+.button .icon i{
+    font-size: 10rem;
+    line-height: 110px;
+}
+.button span {
+    font-size: 2rem;
+    line-height: 110px;
+}
+
+/*Certificate*/
+
+.main-certificates {
+    grid-template-columns: repeat(7, 1fr);
+}
+.certificate-platzi {
+    grid-column: 1 / 3;
+}
+.certificate-others {
+    grid-column: 3 / 5;
+}
+.contacto {
+    grid-column: 5 / 8;
+}
+/*Paypal*/
+
+.paypal--boton{
+    width: 210px;
+}
