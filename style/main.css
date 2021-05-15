@@ -335,7 +335,7 @@ main .main--programs .lenguages .Matplotlib{
     justify-self: center;
 }
 main .main--programs .lenguages img{
-    width: 60%;
+    width: 70%;
 }
 /*GITHUB*/
 main .main--programs .github {
@@ -570,7 +570,7 @@ main .main-books-photos .likes .likes--info{
     font-size: calc(1em + .5vw);
     margin: 10px;
     padding: 0 10px;
-    height: auto;
+    height: 26px;
 }
 .certificate-platzi p:hover, .certificate-others p:hover {
     font-size: calc(1em + .6vw);
