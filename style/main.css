@@ -570,6 +570,7 @@ main .main-books-photos .likes .likes--info{
     font-size: calc(1em + .5vw);
     margin: 10px;
     padding: 0 10px;
+    height: auto;
 }
 .certificate-platzi p:hover, .certificate-others p:hover {
     font-size: calc(1em + .6vw);
@@ -670,7 +671,7 @@ main .main-books-photos .likes .likes--info{
     font-size: 100px;
     line-height: 100px;
 }
-.button .icon:hover i{
+.button:hover i{
     color: white;
 }
 
