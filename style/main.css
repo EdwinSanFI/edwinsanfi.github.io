@@ -253,12 +253,7 @@ main .main--programs {
     padding-left: 15px;
     font-size: calc(1em + 1vw);
 }
-/* REVISAAAAAAAAAAR */
-.last-program-info--area {
-    display: flex;
-    align-self: center;
-    text-align: center;
-}
+
 /*Lenguajes*/
 .lenguages {
     background-color: var(--principal);
@@ -382,7 +377,7 @@ main .main--schools {
     align-items: center;
 }
 /* PLATZI */
-.platzi{
+.platzi, .unam {
     display: grid;
     grid-template-rows: auto;
     border: 5px solid black;
@@ -392,51 +387,49 @@ main .main--schools {
     width: calc(100% - 10px);
 }
 .platzi h2, .unam h2{
-    display: inline;
-    justify-self: center;
     font-size: calc(1.5em + 1vw);
     margin: 10px 0;
+    text-align: center;
 }
-.platzi--div, .unam--div{
-    display: grid;
-    grid-template-columns: auto auto;
-    padding-left: 15px;
-    font-size: calc(1em + .5vw);
+.platzi--div-title img{
+    width: 30%;
+    float: right;
 }
+.platzi--div-content img{
+    width: 60%;
+    float: right;
+    padding: 5px;
+}
+/*Similitud */
 .platzi--div div, .unam--div div{
-    display: grid;
-    justify-items: center;
-    font-size: calc(1em + .5vw);
+    margin: auto;
+    width: 85%;
 }
-/*Imagen de código*/
-.platzi--div-image img, .unam--div .unam--div-image img{
-    width: 120px;   
-    padding-right: 15px;
+.platzi--div p, .unam--div p {
+    display: inline-block;
+    width: 100%;
+    font-size: calc(1em  + 1vw);
 }
-/**/
-.platzi--div-image .platzi--logo{
-    width: 100px;   
-    padding-right: 15px;
+.platzi--div-title, .unam--div-title {
+    text-align: center;
+}
+.platzi--div span ,.unam--div span{
+    font-weight: 700;
 }
 /* UNAM */
-main .main--schools .unam {
-    display: grid;
-    grid-template-rows: auto;
-    height: auto;
+.unam {
+    color: black;
     background-color: var(--blue-light);
-    border: 5px solid black;
-    width: calc(100% - 10px);
 }
-main .main--schools .unam--div .unam--div-image {
-    display: grid;
-    grid-template-rows: auto auto;
-    justify-items: center;
+.unam--div-content img {
+    width: 60%;
+    float: right;
+    padding: 5px;
 }
-main .main--schools .unam--div .unam--div-image .unam--logo{
-    width: 65px;
-    padding-right: 15px;
+.unam--div-title img {
+    float: right;
+    width: 20%;
 }
-
     /* MY LIKES */
 main .main-books-photos {
     display: grid;
@@ -525,6 +518,24 @@ main .main-books-photos .likes .likes--info{
     width: 100px;
     margin: 0%;
 }
+.main-adobe img:hover {
+    width: 110px;
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
 .XD {
     width: calc(100% - 10px);
     border: 5px solid black;
@@ -533,6 +544,7 @@ main .main-books-photos .likes .likes--info{
 .XD a{
     display: grid;
     justify-items: center;
+    font-size: calc(1em + .5vw);
     color: var(--blue-denim);
 }
 .photoshop {
@@ -543,6 +555,7 @@ main .main-books-photos .likes .likes--info{
 .photoshop a{
     display: grid;
     justify-items: center;
+    font-size: calc(1em + .5vw);
     color: var(--blue-denim);
 }
 .illustrator {
@@ -552,8 +565,12 @@ main .main-books-photos .likes .likes--info{
 }
 .illustrator a{
     display: grid;
+    font-size: calc(1em + .5vw);
     justify-items: center;
 }
+.XD a:hover, .photoshop a:hover, .illustrator a:hover {
+    font-size: calc(1em + .6vw);
+} 
 
     /* CERTIFICATES */
 .main-certificates {
