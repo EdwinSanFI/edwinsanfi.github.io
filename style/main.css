@@ -11,9 +11,7 @@
 body {
     margin: 0%;
     box-sizing: border-box;
-    background-color: aliceblue;
     font-family: 'Bree Serif', 'Open Sans', sans-serif;
-    /* background-color: var(--blue-grey); */
     scroll-behavior: smooth;
 }
 html {
@@ -25,16 +23,12 @@ a {
 
 /* CABECERA */
 
-.nav--header {
+.nav__header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
 }
-.nav--menu img {
-    width: 35px;
-    margin: 15px;
-}
-.nav--logo {
+.nav__logo {
     display: flex;
     background-color: var(--principal);
     grid-column: 1 / 2;
@@ -44,17 +38,21 @@ a {
     align-items: center;
     border: 5px solid black
 }
-.nav--menu {
+.nav__menu img {
+    width: 35px;
+    margin: 15px;
+}
+.nav__menu {
     display: flex;
     justify-content: flex-end;
     grid-column: 2 / 4;
     background-color: var(--blue-grey);
     border: 5px solid black;
 }
-.nav--menu-image {
+.nav__menu--image {
     margin-right: 1rem;
 }
-.nav--menu ul {
+.nav__menu ul {
     display: none;
     list-style: none;
     position: absolute;
@@ -63,38 +61,38 @@ a {
     margin: 2px 0px 0px -80px;
     font-size: 2rem;
 }
-.nav--menu-image:hover ul, ul:hover{
+.nav__menu--image:hover ul, ul:hover{
     display: block;
 }
-.nav--menu li {
+.nav__menu li {
     margin: 10px 40px;
 }
-.nav--menu li a {
+.nav__menu li a {
     text-decoration: none;
-    color: var(--principal);
+    color: white;
 }
-.nav--menu li a:hover{
+.nav__menu li a:hover{
     text-decoration: underline;
 }
 
     /* Main */
-.main--introduction {
+.main__introduction {
     display: flex;
     flex-wrap: wrap;
 }
 
 /* Imagen */
-.main--info-img {
+.main__info--img {
     border: 5px solid black;
     height: 230px;
     width: 100%;
 }
-.main--info-img img{
+.main__info--img img{
     width: 100%;
     height: auto;
 }
 /* Información sobre mi */
-.main--personal-info {
+.main__personal-info {
     width: calc(100% - 10px);
     border: 5px solid black;
     display: grid;
@@ -102,24 +100,24 @@ a {
     align-items: center;
     background-color: var(--blue-light);
 }
-.main--personal-info h1 {
+.main__personal-info h1 {
     font-size: calc(2em + 1vw);
     margin: 10px 0 0 20px;
 }
-.main--personal-info p {
+.main__personal-info p {
     margin: 0%;
     font-size: calc(1em + .7vw);
     padding: 25px 20px;
 }
-.main--personal-info .tags {
+.main__personal-info--tags {
     display: grid;
     grid-template-rows: repeat(4, 1fr);
 }
-.main--personal-info .tags p {
+.main__personal-info--tags p {
     padding: 10px 40px;
 }
 /* Curriculum Vitae */
-.main--cv {
+.main__info--cv {
     width: calc(100% -10px);
     height: auto;
     border: 5px solid black;
@@ -128,17 +126,17 @@ a {
     align-items: center;
     justify-content: center;
 }
-.main--cv div {
+.main__info--cv div {
     display: grid;
     grid-template-rows: auto;
     justify-items: center;
     align-items: center;
 }
-.main--cv img{
+.main__info--cv img{
     margin-top: 10px;
     width: 90%;
 }
-.main--cv p{
+.main__info--cv p{
     font-size: calc(1em + .7vw);
     background-color: transparent;
     border-radius: 5px;
@@ -147,28 +145,30 @@ a {
     justify-content: center;
     padding: 2px 2rem;
 }
-.main--cv a {
+.main__info--cv a {
     color: #343838;
 }
-.main--cv p:hover {
+.main__info--cv p:hover {
     font-size: calc(1em + .8vw);
     border: 2px solid black
 }
 
     /* Menú */
-main .menu {
+.menu {
     display: grid;
     grid-template-rows: repeat(2, auto);
     background-color: black;
+    /*display:flex;
+    flex-grow: 1;
+    flex-wrap: wrap;*/
 }
 /* IMAGEN INTRODUCTORIA */
-
-.menu--img{
+.menu__img{
     width: calc(100% - 10px);
     height: 250px;
     border: 5px solid black;
 }
-.menu--img .background{
+.menu__background{
     z-index: -1;
     top: 0;
     left: 0;
@@ -181,23 +181,23 @@ main .menu {
     background-attachment: fixed;
 }
 /* BOTONES */
-.menu--buttons {
+.menu__buttons {
     background-color: var(--blue-grey);
     font-size: calc(1em + .8vw);
     display: grid;
     width: calc(100% - 4px);
     grid-template-columns: repeat(2, 1fr);
 }
-.menu--buttons img{
+.menu__buttons img{
     width: 8%;
 }
-.menu--buttons div {
+.menu__buttons div {
     background-color: var(--red);
     border: 2px solid black;
     width: 100%;
     margin: 0;
 }
-.menu--buttons a{
+.menu__buttons a{
     display: grid;
     justify-items: center;
     color: var(--blue-denim);
@@ -211,51 +211,51 @@ main .menu {
 }
 
     /*Programas*/ 
-main .main--programs {
+.main__programs {
     display: grid;
     grid-template-rows: repeat(3, auto);
     font-size: 1rem;
 }
 /*Ultimo Programa*/
-.last-program {
+.main__last-program {
     background-color: var(--blue-light);
     border: 5px solid black;
     width: auto;
     max-width: 800px;
 }
-.last-program h2 {
+.main__last-program h2 {
     margin: 0 0 7px 0;
     display: flex;
     justify-content: center;
     font-size: calc(1.5em + 1vw);
 }
-.last-program .last-program--info {
+.main__last-program--info {
     display: grid;
     grid-template-rows: repeat(3, auto);
     justify-items: center;
 }
-.last-program--info div {
+.main__last-program--info div {
     width: 85%;
 }
-.last-program--info div p {
+.main__last-program--info div p {
     display: inline-block;
     width: 100%;
 }
-.last-program--info div img{
+.main__last-program--info div img{
     width: 45%;
     float: right;
     padding: 5px;
 }
-.last-program--info div span {
+.main__last-program--info div span {
     font-weight: 700;
 }
-.last-program .last-program--info div p{
+.main__last-program--info div p{
     padding-left: 15px;
     font-size: calc(1em + 1vw);
 }
 
 /*Lenguajes*/
-.lenguages {
+.main__lenguages {
     background-color: var(--principal);
     border: 5px solid black;
     display: grid;
@@ -268,7 +268,7 @@ main .main--programs {
     width: auto;
     max-width: 600px;
 }
-main .main--programs .lenguages h2{
+.main__lenguages h2{
     font-size: calc(1.5em + 1vw);
     color: var(--blue-denim);
     margin: 10px 0;
@@ -276,84 +276,84 @@ main .main--programs .lenguages h2{
     justify-content: center;
     grid-area: titulo;
 }
-main .main--programs .lenguages .c{
+.main__lenguages--c{
     grid-area: c;
     display: flex;
     align-self: center;
     justify-self: center;
 }
-main .main--programs .lenguages .Java{
+.main__lenguages--Java{
     grid-area: Java;
     display: flex;
     align-self: center;
     justify-self: center;
 }
-main .main--programs .lenguages  .JavaScript{
+.main__lenguages--JavaScript{
     grid-area: JavaScript;
     align-self: center;
     display: flex;
     justify-self: center;
 }
-main .main--programs .lenguages  .TensorFlow{
+.main__lenguages--TensorFlow{
     grid-area: TensorFlow;
     display: flex;
     align-self: center;
     justify-self: center;
 }
-main .main--programs .lenguages  .Swift{
+.main__lenguages--Swift{
     grid-area: Swift;
     display: flex;
     align-self: center;
     justify-self: center;
 }
-main .main--programs .lenguages  .Python{
+.main__lenguages--Python{
     grid-area: Python;
     display: flex;
     align-self: center;
     justify-self: center;
 }
-main .main--programs .lenguages  .HTML{
+.main__lenguages--HTML{
     grid-area: HTML;
     align-self: center;
     display: flex;
     justify-self: center;
     /* padding: 0 0 50px 0; */
 }
-main .main--programs .lenguages  .Numpy{
+.main__lenguages--Numpy{
     grid-area: Numpy;
     display: flex;
     align-self: center;
     justify-self: center;
 }
-main .main--programs .lenguages  .php{
+.main__lenguages--php{
     grid-area: php;
     display: flex;
     align-self: center;
     justify-self: center;
 }
-main .main--programs .lenguages  .MySQL{
+.main__lenguages--MySQL{
     grid-area: MySQL;
     display: flex;
     align-self: center;
     justify-self: center;
 }
-main .main--programs .lenguages .Css{
+.main__lenguages--Css{
     grid-area: Css;
     display: flex;
     justify-self: center;
     align-self: center;
 }
-main .main--programs .lenguages .Matplotlib{
+.main__lenguages--Matplotlib{
     grid-area: Matplotlib;
     display: flex;
     align-self: center;
     justify-self: center;
 }
-main .main--programs .lenguages img{
+.main__lenguages img{
     width: 70%;
 }
 /*GITHUB*/
-main .main--programs .github {
+.main__github {
     background-color: var(--blue-denim);
     border: 5px solid black;
     display: grid;
@@ -362,7 +362,7 @@ main .main--programs .github {
     justify-items: center;
     width: auto;
 }
-main .main--programs .github  p{
+.main__github  p{
     font-size: calc(1em + 1vw);
     border: 2px solid black;
     border-radius: 5px;
@@ -370,14 +370,14 @@ main .main--programs .github  p{
 }
 
     /* Escuelas */ 
-main .main--schools {
+.main__schools {
     display: grid;
     grid-template-rows: repeat(2, auto);
     justify-items: center;
     align-items: center;
 }
-/* PLATZI */
-.platzi, .unam {
+/*Similitud */
+.main__schools--platzi, .main__schools--unam {
     display: grid;
     grid-template-rows: auto;
     border: 5px solid black;
@@ -386,61 +386,62 @@ main .main--schools {
     height: 100%;
     width: calc(100% - 10px);
 }
-.platzi h2, .unam h2{
+.main__schools--platzi h2, .main__schools--unam h2{
     font-size: calc(1.5em + 1vw);
     margin: 10px 0;
     text-align: center;
 }
-.platzi--div-title img{
-    width: 30%;
-    float: right;
-}
-.platzi--div-content img{
-    width: 60%;
-    float: right;
-    padding: 5px;
-}
-/*Similitud */
-.platzi--div div, .unam--div div{
+.platzi__div div, .unam__div div{
     margin: auto;
     width: 85%;
 }
-.platzi--div p, .unam--div p {
+.platzi__div p, .unam__div p {
     display: inline-block;
     width: 100%;
     font-size: calc(1em  + 1vw);
 }
-.platzi--div-title, .unam--div-title {
+.platzi__div--title, .unam__div--title {
     text-align: center;
 }
-.platzi--div span ,.unam--div span{
+.platzi__div span ,.unam__div span{
     font-weight: 700;
 }
-/* UNAM */
-.unam {
-    color: black;
-    background-color: var(--blue-light);
+/* PLATZI */
+.platzi__div--title img{
+    width: 30%;
+    float: right;
 }
-.unam--div-content img {
+.platzi__div--content img{
     width: 60%;
     float: right;
     padding: 5px;
 }
-.unam--div-title img {
+/* UNAM */
+.main__schools--unam {
+    color: black;
+    background-color: var(--blue-light);
+}
+.unam__div--title img {
     float: right;
     width: 20%;
 }
-    /* MY LIKES */
-main .main-books-photos {
+.unam__div--content img {
+    width: 60%;
+    float: right;
+    padding: 5px;
+}
+
+    /* MY main__likes */
+.main__books-photos {
     display: grid;
     grid-template-rows: repeat(3, auto);
 }
 /*BOOKS*/
-main .main-books-photos .books{
+.main__books{
     background-color: var(--red);
     border: 5px solid black;
 }
-main .main-books-photos .books h2{
+.main__books h2{
     font-size: calc(1.5em + 1vw);
     color: var(--blue-denim);
     display: grid;
@@ -448,77 +449,76 @@ main .main-books-photos .books h2{
     margin: 10px 0;
     width: auto;
 }
-main .main-books-photos .books div {
+.main__books div {
     display: grid;
     grid-template-columns: auto;
     align-items: center;
     justify-items: center;
 }
-main .main-books-photos .books img{
+.main__books img{
     width: 17%;
 }
 /*LIKES*/
-main .main-books-photos .likes {
+.main__likes {
     background-color: var(--blue-denim);
     display: grid;
     grid-template-rows: repeat(2, auto);
     justify-items: center;
     border: 5px solid black;
 }
-main .main-books-photos .likes h2{
+.main__likes h2{
     font-size: calc(2rem + .8vw);
     margin: 10px 0;
 }
-main .main-books-photos .likes .likes--info{
+.main__likes ul {
+    list-style-type: circle;
+    margin: 0 0 0 15px;
+}
+.main__likes li {
+    padding: 5px;
+}
+.main__likes--info{
     font-size: calc(1em + .7vw);
     display: grid;
     grid-template-columns: repeat(2, auto);
 }
-
-.main-books-photos .likes ul {
-    list-style-type: circle;
-    margin: 0 0 0 15px;
-}
-.main-books-photos .likes li {
-    padding: 5px;
-}
-.main-books-photos .likes .likes--info div img {
+.main__likes--info div img {
     width: 40%;
 }
 /*PHOTOS*/
-.main-books-photos .photos {
+.main__photos {
     background-color: var(--principal);
     border: 5px solid black;
 }
-.main-books-photos .photos h2{
+.main__photos h2{
     font-size: calc(1.5em + .8vw);
     display: grid;
     justify-items: center;
     margin: 10px 0;
     color: var(--blue-denim);
 }
-.main-books-photos .photos a{
+.main__photos a{
     display: grid;
     grid-template-rows: auto;
     justify-items: center;
 }
-.main-books-photos .photos img {
+.main__photos img {
     width: 30%;
 }
 
     /* ADOBE */
-.main-adobe {
+.main__adobe {
     display: grid;
     grid-template-rows: repeat(3, auto);
     font-size: 2rem;
     justify-items: center;
     width: 100%;
 }
-.main-adobe img {
+.main__adobe img {
     width: 100px;
     margin: 0%;
 }
-.main-adobe img:hover {
+.main__adobe img:hover {
     width: 110px;
     animation: shake 0.5s;
     animation-iteration-count: infinite;
@@ -536,44 +536,44 @@ main .main-books-photos .likes .likes--info{
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
-.XD {
+.adobe__XD {
     width: calc(100% - 10px);
     border: 5px solid black;
     background-color: var(--blue-grey);
 }
-.XD a{
+.adobe__XD a{
     display: grid;
     justify-items: center;
     font-size: calc(1em + .5vw);
     color: var(--blue-denim);
 }
-.photoshop {
+.adobe__photoshop {
     background-color: var(--principal);
     width: calc(100% - 10px);
     border: 5px solid black;
 }
-.photoshop a{
+.adobe__photoshop a{
     display: grid;
     justify-items: center;
     font-size: calc(1em + .5vw);
     color: var(--blue-denim);
 }
-.illustrator {
+.adobe__illustrator {
     background-color: var(--blue-denim);
     width: calc(100% - 10px);
     border: 5px solid black;
 }
-.illustrator a{
+.adobe__illustrator a{
     display: grid;
     font-size: calc(1em + .5vw);
     justify-items: center;
 }
-.XD a:hover, .photoshop a:hover, .illustrator a:hover {
+.adobe__XD a:hover, .adobe__photoshop a:hover, .adobe__illustrator a:hover {
     font-size: calc(1em + .6vw);
 } 
 
     /* CERTIFICATES */
-.main-certificates {
+.main__certificates {
     display: grid;
     grid-template-rows: repeat(3, auto);
     justify-items: center;
@@ -581,27 +581,26 @@ main .main-books-photos .likes .likes--info{
     width: 100%;
     height: auto;
 }
-.main-certificates img{
+.main__certificates img{
     width: 100%;
     margin: 0;
 }
-/*PLATZI*/
-.certificate-platzi {
+/* Combinados*/
+.certificates {
     display: grid;
     grid-template-rows: auto;
     justify-items: center;
     border: 5px solid black;
-    background-color: var(--blue-denim);
     width: calc(100% - 10px);
     height: 100%;
 }
-.certificate-platzi a{
+.certificates a {
     display: grid;
     grid-template-rows: auto;
     justify-items: center;
     width: auto;
 }
-.certificate-platzi p, .certificate-others p{
+.certificates p {
     border: 1px solid black;
     border-radius: 10px;
     font-size: calc(1em + .5vw);
@@ -609,27 +608,20 @@ main .main-books-photos .likes .likes--info{
     padding: 0 10px;
     height: 26px;
 }
-.certificate-platzi p:hover, .certificate-others p:hover {
+.certificates p:hover {
     font-size: calc(1em + .6vw);
     border: 2px solid black
 }
-/*OTROS*/
-.certificate-others {
-    display: grid;
-    grid-template-rows: auto;
-    justify-items: center;
-    border: 5px solid black;
-    width: calc(100% - 10px);
-    height: 100%;
+/*PLATZI*/
+.certificate__platzi {
     background-color: var(--blue-light);
 }
-.certificate-others a{
-    display: grid;
-    grid-template-rows: auto;
-    justify-items: center;
+/*OTROS*/
+.certificate__others {
+    background-color: var(--blue-denim);
 }
-/* CONTACTO */
-.contacto {
+    /* CONTACTO */
+.main__contact {
     display: grid;
     grid-template-rows: repeat(4, auto);
     justify-items: center;
@@ -637,12 +629,12 @@ main .main-books-photos .likes .likes--info{
     border: 5px solid black;
     width: calc(100% - 10px);
 }
-.contacto h2 {
+.main__contact h2 {
     font-size: calc(2rem + 1vw);
     color: white;
     margin: 10px 0;
 }
-.contact-images {
+.contact__images {
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -663,18 +655,18 @@ main .main-books-photos .likes .likes--info{
     align-items: center;
     background-color: black;
 }
-.github .button {
+.main__github .button {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 100px;
     height: 100px;
     border-radius: 100px;
 }
-.github .button span {
+.main__github .button span {
     font-size: 2rem;
     line-height: 100px;
 }
-.github .button img {
+.main__github .button img {
     width: 100px;
     border-radius: 100px;
 }
@@ -682,7 +674,7 @@ main .main-books-photos .likes .likes--info{
     width: 150px;
     background-color: var(--red);
 }
-.github .button:hover {
+.main__github .button:hover {
     width: 310px;
     background-color: var(--blue-denim);
 }
@@ -693,7 +685,7 @@ main .main-books-photos .likes .likes--info{
     text-align: center;
     border-radius: 50px;
 }
-.github .button .icon {
+.main__github .button .icon {
     width: 100px;
     height: 100px;
 }
@@ -703,7 +695,7 @@ main .main-books-photos .likes .likes--info{
     line-height: 70px;
     color: var(--red);
 }
-.github .button .icon i{
+.main__github .button .icon i{
     color: var(--blue-denim);
     font-size: 100px;
     line-height: 100px;
@@ -716,35 +708,32 @@ main .main-books-photos .likes .likes--info{
     font-size: 1.5rem;
     line-height: 70px;
 }
-.github .button:nth-child(1):hover .icon {background: #333;}
+.main__github .button:nth-child(1):hover .icon {background: #333;}
 .button:nth-child(1):hover .icon {background: #d6249f;
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);}
 .button:nth-child(2):hover .icon {background:  #0e76a8;}
 .button:nth-child(3):hover .icon {background: #1DA1F2;}
 
-.github .button:nth-child(1) span {color: #333;}
+.main__github .button:nth-child(1) span {color: #333;}
 .button:nth-child(1) span {color: white;}
 .button:nth-child(2) span {color: var(--blue-denim);}
 .button:nth-child(3) span {color: #1DA1F2;}
 
-main .main-certificates .contacto .contact-images img {
+.contact__images img {
     width: 7rem;
 } 
-main .main-certificates .contacto .contact-paypal {
-    font-size: 1.4rem;
+    /*Paypal*/
+.contact__paypal {
+    font-size: calc(1em + .5vw);
     color: var(--blue-denim);
 }
-/*Paypal*/
-
-.paypal--boton{
+.paypal__button{
     width: 150px;
 }
-
     /* FOOTER */
 .footer{
     border: 5px solid black;
     font-size: calc(1em + .7vw);
-
     display: flex;
     justify-content: center;
     align-items: center;

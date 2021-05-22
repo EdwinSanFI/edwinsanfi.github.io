@@ -1,12 +1,12 @@
-.main--info {
+.main__info {
     display: grid;
     grid-template-columns: repeat(2, auto);
 }
-
-.main--personal-info p{
+/* Información sobre mi */
+.main__personal-info p{
     padding: 15px 10px 0;
 }
-.main--personal-info .tags p {
+.main__personal-info .tags p {
     padding: 5px 10px;
 }
 
@@ -15,61 +15,45 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 }
-.menu--img {
+.menu__img {
     min-width: 320px;
     width: 100%;
     grid-column: 1 / 3;
 }
-.menu--buttons {
+.menu__buttons {
     grid-column: 3 / 6;
 }
-.main--programs {
+.main__programs {
     grid-template: repeat(2, auto) / repeat(2, 1fr);
     width: 100%;
 }
-.last-program {
+.main__last-program {
     grid-row: 1 / 2;
     grid-column: 1 / 2;
 }
-.lenguages {
+.main__lenguages {
     grid-row: 2 / end;
     grid-column: 1 / 3;
 }
 /*github BOTÓN*/
-.github {
-    grid-row: 2 / 2;
+.main__github {
+    grid-row: 1 / 2;
     grid-column: 2 / 3;
 }
-.github .button{
+.main__github .button{
     width: 100px;
     height: 100px;
     display: grid;
     grid-template-rows: repeat(3, auto);
 }
-.github .button:hover {
+.main__github .button:hover {
     width: 100px;
     height: 310px;
     background-color: var(--blue-denim);
 }
-.github .button span {
+.main__github .button span {
     grid-row: 2 / 3;
 }
-.github .button img {
+.main__github .button img {
     grid-row: 3 / 4;
-}
-    /*ESCUELAS*/
-main .main--schools .platzi .platzi--div, .unam .unam--div{
-    font-size: 1.7rem;
-}
-    /*Imagen de código*/
-main .main--schools .platzi .platzi--div-image img, .unam--div .unam--div-image img{
-    width: 250px;
-}
-    /*Logo Platzi*/
-main .main--schools .platzi .platzi--div-image .platzi--logo{
-    width: 170px;
-}
-    /*Logo Unam*/
-main .main--schools .unam--div .unam--div-image .unam--logo{
-    width: 130px;
 }

@@ -1,99 +1,99 @@
 /*Imagen Mía*/
-.main--info-img {
+.main__info--img {
     /* height: 675px; */
     width: 100%;
     height: auto;
 }
-.main--info-img img {
+.main__info--img img {
     height: 100%;
     width: 100%;
 }
 /*Informacion sobre mi*/
-.main--info {
+.main__info {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     font-size: 1rem;
 }
-.main--personal-info h1{
+.main__personal-info h1{
     text-align: center;
     margin: 20px 0 10px 10px;
 }
-.main--personal-info p {
+.main__personal-info p {
     padding: 10px 1em 1em;
 }
-.main--personal-info .tags p {
+.main__personal-info--tags p {
     padding: 1px 1vh 1em;
 }
 /*Botones*/
-.menu--buttons a{
+.menu__buttons a{
     padding-left: 3vw;
     display: flex;
     align-items: center;
     height: 100%;
 }
-.menu--buttons a article {
+.menu__buttons a article {
     padding-left: 2vw;
 }
 /*Programs*/
-.main--programs {
+.main__programs {
     grid-template-columns: auto auto 1fr;
 }
 /*Last Program*/
-.last-program h2, .lenguages h2 {
+.main__last-program h2, .main__lenguages h2 {
     font-size: 3rem;
 }
-.lenguages {
+.main__lenguages {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
 }
-.github {
+.main__github {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
     min-width: 200px;
 
 }
     /*GitHub*/
-.github .button{
+.main__github .button{
     width: 100px;
     height: 100px;
     display: grid;
     grid-template-columns: repeat(3, auto);
 }
-.github .button:hover {
+.main__github .button:hover {
     width: 300px;
     height: 100px;
     background-color: var(--blue-denim);
 }
-.github .button span {
+.main__github .button span {
     grid-row: 1 / 2;
     grid-column: 2 / 3;
 }
-.github .button img {
+.main__github .button img {
     grid-row: 1 / 2;
     grid-column: 3 / 4;
 }
     /*Escuelas*/
-.main--schools {
+.main__schools {
     grid-template-columns: repeat(2, auto);
 }
     /*Book Section*/
-.main-books-photos {
+.main__books-photos {
     grid-template-columns: repeat(3, auto);
 }
     /*Adobe*/
-.main-adobe {
+.main__adobe {
     grid-template-columns: repeat(3, auto);
 }
     /*Certificates*/
-.main-certificates {
+.main__certificates {
     grid-template-columns: repeat(4, auto);
 }
     /*Contacto*/
-.contacto {
+.main__contact {
     grid-column: 3 / 5;
     height: 100%;
 }
-.contacto h2 {
+.main__contact h2 {
     font-size: 3rem;
     margin: 20px 0;
 }
@@ -121,15 +121,12 @@
     font-size: 2rem;
     line-height: 60px;
 }
-main .main-certificates .contacto .contact-paypal {
-    font-size: 2rem;
-}
 /*Paypal*/
-.contact-paypal {
+.contact__paypal {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.paypal--boton{
+.paypal__button{
     width: 100px;
 }

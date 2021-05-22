@@ -1,4 +1,4 @@
-.main--introduction {
+.main__introduction {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
@@ -29,20 +29,20 @@
 
 /*Certificate*/
 
-.main-certificates {
+.main__certificates {
     grid-template-columns: repeat(7, 1fr);
 }
-.certificate-platzi {
+.certificate__platzi {
     grid-column: 1 / 3;
 }
-.certificate-others {
+.certificate__others {
     grid-column: 3 / 5;
 }
-.contacto {
+.main__contact {
     grid-column: 5 / 8;
 }
 /*Paypal*/
 
-.paypal--boton{
+.paypal__button{
     width: 210px;
 }
