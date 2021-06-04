@@ -175,12 +175,11 @@ a {
     width: 100%;
     height: 100%;
     background-image: url('/imagenes/Fotos/Programador.jpg');
-    background-position: scroll;
     background-size: cover;
     background-repeat: no-repeat; 
     background-attachment: fixed;
-    background-attachment: -webkit-(scroll);    
-    background-attachment: -chrome-(scroll);    
+    -webkit-background-attachment: scroll;    
+    -chrome-background-attachment: fixed;    
 }
 /* BOTONES */
 .menu__buttons {
@@ -267,8 +266,7 @@ a {
                          "Swift JavaScript TensorFlow Python"
                          "php HTML Numpy MySQL"
                          ". Css Matplotlib .";
-    width: auto;
-    max-width: 600px;
+    width: calc(100% - 10px);
 }
 .main__lenguages h2{
     font-size: calc(1.5em + 1vw);

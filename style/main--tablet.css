@@ -34,9 +34,9 @@
 .menu__buttons a article {
     padding-left: 2vw;
 }
-/*Programs*/
+/*  */
 .main__programs {
-    grid-template-columns: auto auto 1fr;
+    grid-template-columns: auto auto minmax(320px, auto);
 }
 /*Last Program*/
 .main__last-program h2, .main__lenguages h2 {
@@ -60,7 +60,8 @@
     grid-template-columns: repeat(3, auto);
 }
 .main__github .button:hover {
-    width: 300px;
+    width: 100%;
+    max-width: 310px; 
     height: 100px;
     background-color: var(--blue-denim);
 }
