@@ -179,6 +179,8 @@ a {
     background-size: cover;
     background-repeat: no-repeat; 
     background-attachment: fixed;
+    background-attachment: -webkit-(scroll);    
+    background-attachment: -chrome-(scroll);    
 }
 /* BOTONES */
 .menu__buttons {
