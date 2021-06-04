@@ -36,7 +36,7 @@
 }
 /*  */
 .main__programs {
-    grid-template-columns: auto auto minmax(320px, auto);
+    grid-template-columns: auto 1fr minmax(320px, 1fr)
 }
 /*Last Program*/
 .main__last-program h2, .main__lenguages h2 {
