@@ -49,8 +49,6 @@
 .main__github {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
-    min-width: 200px;
-
 }
     /*GitHub*/
 .main__github .button{
