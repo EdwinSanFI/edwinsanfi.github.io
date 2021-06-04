@@ -36,12 +36,9 @@
 }
 /*  */
 .main__programs {
-    grid-template-columns: auto 1fr minmax(320px, 1fr)
+    grid-template-columns: repeat(2, auto) minmax(250px, auto);
 }
 /*Last Program*/
-.main__last-program h2, .main__lenguages h2 {
-    font-size: 3rem;
-}
 .main__lenguages {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
@@ -91,10 +88,6 @@
 .main__contact {
     grid-column: 3 / 5;
     height: 100%;
-}
-.main__contact h2 {
-    font-size: 3rem;
-    margin: 20px 0;
 }
     /*Animación*/
 .button{ 
