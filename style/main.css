@@ -175,9 +175,7 @@ a {
     background-image: url('/imagenes/Fotos/Programador.jpg');
     background-size: cover;
     background-repeat: no-repeat; 
-    background-attachment: fixed;
-    -webkit-background-attachment: scroll;    
-    -chrome-background-attachment: fixed;    
+    background-attachment: fixed;  
 }
 /* BOTONES */
 .menu__buttons {
@@ -438,7 +436,7 @@ a {
 .main__books{
     background-color: var(--red);
     border: 5px solid black;
-    min-height: 140px;
+    min-height: 150px;
 }
 .main__books h2{
     font-size: calc(1.5em + 1vw);
@@ -453,7 +451,7 @@ a {
     justify-content: center;
 }
 .main__books img{
-    max-width: 17%;
+    max-width: 20%;
 }
 .item--1 {
     transform: translateX(160%) rotate(-30deg);

@@ -12,7 +12,7 @@
 body {
     margin: 0%;
     box-sizing: border-box;
-    background-color: aliceblue;
+    background-color: var(--blue-denim);
     font-family: 'Roboto', 'Open Sans', sans-serif;
     overflow-x: hidden;
 }
@@ -117,7 +117,6 @@ main{
 }
 /* BOOKS */
 .books__section {
-    white-space: nowrap;
     padding-bottom: 10px;
     display: grid;
     grid-template-rows: repeat(9, 1fr);
@@ -135,10 +134,10 @@ main{
 .book__items{
     background-color: palevioletred;
     width: 200px;
-    height: 250px;
+    height: 260px;
     border-radius: 20px;
     overflow: hidden;
-    margin-right: 10px;
+    margin-right: 20px;
     display: inline-block;
     cursor: pointer;
     transition: 450ms all;
@@ -166,29 +165,3 @@ main{
 .book__section--title {
     font-size: calc(2em + 1vw);
 }
-
-#container {
-    width: 100%;
-    height: auto;
-    overflow-y: hidden;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-
-/* Libros de Python */
-
-/* Libros de Algoritmos */
-
-/* Libros de Creación de Páginas Web */
-
-/* Libros de Machine Learning */
-
-/* Libros de Ciencia */
-
-/* Libros de Motivación */
-
-/* Libros de Finanzas */
-
-/* Libros de Crecimiento Personal */
-
-/* Libros de Mindfulness */
