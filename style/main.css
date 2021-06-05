@@ -438,24 +438,52 @@ a {
 .main__books{
     background-color: var(--red);
     border: 5px solid black;
+    min-height: 140px;
 }
 .main__books h2{
     font-size: calc(1.5em + 1vw);
     color: var(--blue-denim);
-    display: grid;
-    justify-items: center;
+    display: flex;
+    justify-content: center;
     margin: 10px 0;
     width: auto;
 }
-.main__books div {
-    display: grid;
-    grid-template-columns: auto;
-    align-items: center;
-    justify-items: center;
+.main__books--content{
+    display: flex;
+    justify-content: center;
 }
 .main__books img{
-    width: 17%;
+    max-width: 17%;
 }
+.item--1 {
+    transform: translateX(160%) rotate(-30deg);
+}
+.item--2 {
+    transform: translateX(70%) rotate(-20deg);
+}
+.item--3 {
+    transform: translateX(-20%) rotate(-10deg);
+}
+.item--4 {
+    transform: translateX(-110%);
+}
+.main__books--content:hover > .main__books--items{
+    transform:  rotate(0deg);
+    transition: all 0.4s ease-in;
+}
+.main__books--content:hover .main__books--items {
+    opacity: 0.6;
+
+}
+.main__books--content:hover .main__books--items:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}
+.main__books--content:hover {
+    display: flex;
+    justify-content: space-around;
+}
+
 /*LIKES*/
 .main__likes {
     background-color: var(--blue-denim);

@@ -1,11 +1,20 @@
 /* RESPONSIVE DESIGN */
 
+/* VARIABLES */
+:root {
+    --principal: #008C9E;
+    --blue-grey: #343838;
+    --red: #9e1d08;
+    --blue-light: #b6d7f2;
+    --blue-denim: #d3e0f7;
+}
 /* ESTANDARIZAR */
 body {
     margin: 0%;
     box-sizing: border-box;
     background-color: aliceblue;
     font-family: 'Roboto', 'Open Sans', sans-serif;
+    overflow-x: hidden;
 }
 html {
     font-size: 62.5%;
@@ -15,10 +24,56 @@ a {
 }
 
 /* CABECERA */
-.nav-header {
+.nav__header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+}
+.nav__logo {
     display: flex;
-    justify-content: space-between;
-    border-bottom: 2px white;
+    background-color: var(--principal);
+    grid-column: 1 / 2;
+    font-size: calc(2em + 1vw);
+    color: #F0F5F9;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid black
+}
+.nav__menu img {
+    width: 35px;
+    margin: 15px;
+}
+.nav__menu {
+    display: flex;
+    justify-content: flex-end;
+    grid-column: 2 / 4;
+    background-color: var(--blue-grey);
+    border: 5px solid black;
+}
+.nav__menu--image {
+    margin-right: 1rem;
+}
+.nav__menu ul {
+    display: none;
+    list-style: none;
+    position: absolute;
+    text-align: right;
+    padding: 0;
+    margin: 2px 0px 0px -80px;
+    font-size: 2rem;
+}
+.nav__menu--image:hover ul, ul:hover{
+    display: block;
+}
+.nav__menu li {
+    margin: 10px 40px;
+}
+.nav__menu li a {
+    text-decoration: none;
+    color: white;
+}
+.nav__menu li a:hover{
+    text-decoration: underline;
 }
 
 img {
@@ -54,34 +109,33 @@ img {
     text-decoration: underline;
 }
 
-/*BOOKS*/
+/* MAIN */
 main{
     width: 100%;
     overflow: scroll;
-    padding: 100px;
     position: relative;
 }
-main .books  {
+/* BOOKS */
+.books__section {
     white-space: nowrap;
-    margin: 70px 0px;
     padding-bottom: 10px;
     display: grid;
     grid-template-rows: repeat(9, 1fr);
+    padding: 40px;
+    width: 100%;
 }
-/* Libros de C++ */
-main .books .c-books {
+/* Carrusel de Libros */
+.book {
     white-space: nowrap;
     margin: 70px 0px;
     padding-bottom: 10px;
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
-
+    grid-template-columns: repeat(10, 1fr);
 }
-.books .c-books .book-items {
+.book__items{
     background-color: palevioletred;
     width: 200px;
     height: 250px;
-    border-radius: 30px;
     border-radius: 20px;
     overflow: hidden;
     margin-right: 10px;
@@ -91,19 +145,36 @@ main .books .c-books {
     transform-origin: center left;
     position: relative;
 }
-.book-items:hover ~ .book-items {
+.book__items:hover ~ .book__items {
     transform: translate3d(100px, 0, 0);
 }
-.c-books:hover .book-items {
+.book:hover .book__items {
      opacity: 0.3;    
 }
-.c-books:hover .book-items:hover {
+.book:hover .book__items:hover {
     transform: scale(1.5);
     opacity: 1;
 }
-main .books .c-books img{
-    width: 150px;
+.book__items {
+    object-fit: scale-down;
 }
+.book__items img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+.book__section--title {
+    font-size: calc(2em + 1vw);
+}
+
+#container {
+    width: 100%;
+    height: auto;
+    overflow-y: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
 /* Libros de Python */
 
 /* Libros de Algoritmos */
