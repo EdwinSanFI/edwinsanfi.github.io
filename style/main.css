@@ -436,7 +436,6 @@ a {
 .main__books{
     background-color: var(--red);
     border: 5px solid black;
-    min-height: 150px;
 }
 .main__books h2{
     font-size: calc(1.5em + 1vw);
@@ -452,6 +451,7 @@ a {
 }
 .main__books img{
     max-width: 20%;
+    margin-bottom: 25px;
 }
 .item--1 {
     transform: translateX(160%) rotate(-30deg);
