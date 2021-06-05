@@ -132,7 +132,6 @@ main{
     grid-template-columns: repeat(10, 1fr);
 }
 .book__items{
-    background-color: palevioletred;
     width: 200px;
     height: 260px;
     border-radius: 20px;
@@ -142,7 +141,7 @@ main{
     cursor: pointer;
     transition: 450ms all;
     transform-origin: center left;
-    position: relative;
+    position: relative;    
 }
 .book__items:hover ~ .book__items {
     transform: translate3d(100px, 0, 0);
@@ -164,4 +163,25 @@ main{
 }
 .book__section--title {
     font-size: calc(2em + 1vw);
+}
+/* ! Animación */
+.book__items {
+    transform-style: preserve-3d;
+    position: relative;    
+}
+.book__items:hover {
+    transform: rotateY(180deg);
+}
+.face {
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.face.book--image {
+    background-color: red;
+}
+.face.book--info {
+    background-color: #0b775c;
+    transform: rotateX(180deg);
 }

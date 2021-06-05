@@ -33,11 +33,16 @@ a {
     display: flex;
     background-color: var(--principal);
     grid-column: 1 / 2;
-    font-size: calc(2em + 1vw);
     color: #F0F5F9;
     justify-content: center;
     align-items: center;
-    border: 5px solid black
+    border: 5px solid black;
+    text-align: center;
+}
+.nav__logo span {
+    background-color: var(--principal);
+    font-size: calc(2em + 1vw);
+    margin: 0;
 }
 .nav__menu img {
     width: 35px;
@@ -452,6 +457,7 @@ a {
 .main__books img{
     max-width: 20%;
     margin-bottom: 25px;
+    max-height: 240px;
 }
 .item--1 {
     transform: translateX(160%) rotate(-30deg);
